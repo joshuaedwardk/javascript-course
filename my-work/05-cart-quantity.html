@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<!-- TIME LEFT OFF AT: https://youtu.be/EerdGm-ehJQ?t=8645MadaZ23NHiC-CWYQpuXyWVZ -->
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart Quantity</title>
+</head>
+<body>
+    <h1>Cart Quantity</h1>
+   
+    <!-- orignal button -->
+     <!-- BACKTICK BUTTON upper left corner below ESC -->
+   <button onclick="
+    console.log(`CART QUANTITY: ${cartQuantity}`);
+    ">Show Quantity</button>
+
+    <!-- plus 1 -->
+    <button onclick="
+    // cartQuantity += 1; or you can use**** cartQuantity++;
+    cartQuantity++;
+    console.log(`CART QUANTITY: ${cartQuantity}`);
+    ">Add to Cart</button>
+
+    <!-- plus 2 button -->
+    <button onclick="
+    // cartQuantity = cartQuantity + 2; <!--is the same as += 2 -->
+    cartQuantity += 2;
+    console.log(`CART QUANTITY:: ${cartQuantity}`);    
+    ">+2</button>
+    
+    <!-- plus 3 button -->
+    <button onclick="
+    cartQuantity += 3;
+    console.log(`CART QUANTITY: ${cartQuantity}`)    
+    ">+3</button>
+
+    <!-- reset button -->
+    <button onclick="
+    cartQuantity = 0;
+    console.log('CART WAS RESET'); console.log(`CART QUANTITY: ${cartQuantity}`);
+    ">Reset Cart</button>
+    
+    <!-- Variable Re-Assignment Shortcuts
+    += 2 | variable = variable + 2
+    -= 2 | variable = variable - 2
+    *= 2 | variable = variable * 2
+    /= 2 | variable = variable / 2
+    ++   | variable = variable + 1
+    --   | variable = variable - 1 -->
+
+</body>
+<script>
+    let cartQuantity = 0;
+
+</script>
+</html>
+
