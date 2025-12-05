@@ -1,10 +1,13 @@
 Ended at Booleans: https://youtu.be/EerdGm-ehJQ?t=8645MadaZ23NHiC-CWYQpuXyWVZ
 
+
+# ENDED [https://youtu.be/EerdGm-ehJQ?t=11409] Section 6
+
 # Order of Operation End List
 1. (...)
 2. * /
 3. + -
-4. <a name="ComparisonOperators">Comparison Operators</a>
+4. [Comparison Operators](#ComparisonOperators)
 
 
 # Episode 4
@@ -62,7 +65,7 @@ typeof 1234n          // Returns bigint
 typeof Symbol()       // Returns symbol
 typeof x              // Returns undefined
 
-## [Comparison Operators](#ComparisonOperators)
+## <a name="ComparisonOperators">Comparison Operators</a>
 * > Greater than
 * < Less than
 * >= greater than or equal to
@@ -75,3 +78,33 @@ console.log(Math.floor(Math.random() * 10 / 3)) [https://josephcardillo.medium.c
 
 ### Logical Operators
 Let us combinme boolean values
+
+#### OR Operator ||
+
+// Logical And Opperator   
+console.log(true && false);
+console.log(0.2 >= 0 && 0.2 < 1 / 3);
+
+/* OR Operator || Checks if at least 1 side is true */
+console.log(true || false);
+
+/* Not Operator ! It flips the operator */
+console.log(!true);
+
+## Scope - limits where variable exists
+### Any variable we create {....}
+### Will only exist inside the {....}
+Scopes help us avoid naming conflicts
+
+Doesnt work:
+  const randomNumber = Math.random();
+    if (randomNumber >= 0 && randomNumber < 1 / 3) {
+        const computerMove =  'Rock';
+    } else if (randomNumber >= 1 / 3 && randomNumber < 2 / 3) {
+        const computerMove = 'paper';
+    } else if (randomNumber >= 2 / 3 && randomNumber < 1) {
+        const computerMove = 'scissors';
+    }
+
+    console.log(computerMove);
+    ">
