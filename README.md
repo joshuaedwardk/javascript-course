@@ -108,3 +108,32 @@ Doesnt work:
 
     console.log(computerMove);
     ">
+
+    /*const age = 30;
+
+    if (age >= 16) {
+        console.log('I AM OLD');
+        console.log('GREAT');
+    }
+    else if (age >= 14) {
+        console.log('TRY HARDER');
+    }
+    else {
+        console.log('I AM A CHILD');
+    }*/
+
+## Truthy & Falsey
+This wont show it behaves as a false. 
+if (0) {
+    console.log('truthy');
+}
+
+## Falsy values:
+* false
+* 0
+* ''
+* NaN
+* undefined
+* null
+
+Any value not on the falsy list is a truthy.
