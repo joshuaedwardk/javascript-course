@@ -49,20 +49,33 @@
 
     .video {
         display: grid;
-        background-color: #efefef;
+        grid-template-columns: auto auto;
+        background-color: var(--bodyTextColorWhite);
         gap: 1em;
-        padding: 2em;
+        padding: 1em;
         border: 2px solid var(--primary);
-     }
-    
+    }
+
+
     .start,
     .current {
         display: grid;
         padding: 2em;
-        background-color: var(--primaryLight);
+        background-color: var(--third);
         border: 2px solid var(--secondaryLight);
     }
-    
+
+    .start a,
+    .current a {
+        color: #efefef;
+    }
+
+    .start a:hover,
+    .current a:hover {
+        color: #fff;
+    }
+
+
     .goal {
         display: grid;
         background-color: #efefef;
@@ -70,8 +83,8 @@
         padding: 2em;
         border: 2px solid var(--primary);
         margin-bottom: 1em;
-     }
-     
+    }
+
     .game {
         margin-top: 2em;
     }
@@ -87,7 +100,7 @@
         font-family: var(--headerFont);
         color: var(--headerColor);
     }
-    
+
     .title {
         margin-bottom: 1em;
         margin-top: .5em;
@@ -108,13 +121,14 @@
     }
 
     button {
-       padding: 2em;
-       border-radius: 0.5em;
-       background-color: var(--primaryLight);
-       border: 5px solid var(--secondaryLight);
+        padding: 2em;
+        border-radius: 0.5em;
+        background-color: var(--primaryLight);
+        border: 5px solid var(--secondaryLight);
     }
 
-    a:hover, button:hover {
+    a:hover,
+    button:hover {
         cursor: pointer;
     }
 
@@ -124,4 +138,5 @@
         top: 0;
         left: 0;
         opacity: 0;
-    }}
+    }
+}
