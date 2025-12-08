@@ -141,3 +141,4 @@ Any value not on the falsy list is a truthy.
 ## Chapter 7 Done - will add notes later
 
 ## Chapter 8 Objects [Youtube Link](https://youtu.be/EerdGm-ehJQ?t=15682)
+
