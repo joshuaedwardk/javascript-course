@@ -1,142 +1,168 @@
 @media only screen and (min-width: 0rem) {
-    :root {
-        --primary: #001f3f;
-        --primaryLight: #43b7ff;
-        --secondary: #43b7ff;
-        --secondaryLight: #001f3f;
-        --third: #990000;
-        --thirdLight: #f3697e;
-        --headerColor: #1a1a1a;
-        --bodyTextColor: #4e4b66;
-        --bodyTextColorWhite: #fafbfc;
-        --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
-        --headerFontSize: clamp(1.9375rem, 2.9vw, 3.0625rem);
-        --bodyFontSize: clamp(1.2rem, 2.3vw, 1.5rem);
-        --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
-        --headerFont: "Oswald", Arial, sans-serif;
-        --bodyFont: "Source Sans 3", Arial, sans-serif;
-        --navNeon: "Yellowtail", "Adjusted Verdana Fallback", "Verdana", sans-serif;
-    }
+  :root {
+    --primary: #001f3f;
+    --primaryLight: #43b7ff;
+    --secondary: #43b7ff;
+    --secondaryLight: #001f3f;
+    --third: #990000;
+    --thirdLight: #f3697e;
+    --headerColor: #1a1a1a;
+    --bodyTextColor: #4e4b66;
+    --bodyTextColorWhite: #fafbfc;
+    --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
+    --headerFontSize: clamp(1.9375rem, 2.9vw, 3.0625rem);
+    --bodyFontSize: clamp(1.2rem, 2.3vw, 1.5rem);
+    --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+    --headerFont: "Oswald", Arial, sans-serif;
+    --bodyFont: "Source Sans 3", Arial, sans-serif;
+    --navNeon: "Yellowtail", "Adjusted Verdana Fallback", "Verdana", sans-serif;
+  }
 
-    body,
-    html {
-        margin: 0;
-        overflow-x: hidden;
-        padding: 0;
-        font-family: var(--bodyFont);
-        font-size: 100%;
-        color: var(--bodyTextColor);
-        scroll-behavior: smooth;
-    }
+  body,
+  html {
+    margin: 0;
+    overflow-x: hidden;
+    padding: 0;
+    font-family: var(--bodyFont);
+    font-size: 100%;
+    color: var(--bodyTextColor);
+    scroll-behavior: smooth;
+  }
 
-    *,
-    *:before,
-    *:after {
-        margin: 0;
-        box-sizing: border-box;
-        padding: 0;
-    }
+  *,
+  *:before,
+  *:after {
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+  }
 
-    body {
-        transition: background-color 0.3s;
-    }
+  body {
+    transition: background-color 0.3s;
+  }
 
-    .container {
-        position: relative;
-        margin: auto;
-        width: 90%;
-    }
+  .container {
+    position: relative;
+    margin: auto;
+    width: 90%;
+  }
 
-    .video {
-        display: grid;
-        grid-template-columns: auto auto;
-        background-color: var(--bodyTextColorWhite);
-        gap: 1em;
-        padding: 1em;
-        border: 2px solid var(--primary);
-    }
+  .video {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    background-color: var(--bodyTextColorWhite);
+    gap: 1em;
+    padding: 1em;
+    border: 2px solid var(--primary);
+  }
 
+  .start,
+  .current,
+  .review,
+  .end {
+    display: grid;
+    padding: 1em;
+    background-color: var(--third);
+    border: 2px solid var(--secondaryLight);
+  }
 
-    .start,
-    .current {
-        display: grid;
-        padding: 2em;
-        background-color: var(--third);
-        border: 2px solid var(--secondaryLight);
-    }
+  .start a,
+  .current a,
+  .review a,
+  .end a {
+    color: #efefef;
+  }
 
-    .start a,
-    .current a {
-        color: #efefef;
-    }
+  .start a:hover,
+  .current a:hover,
+  .review a:hover,
+  .end a:hover {
+    color: #fff;
+  }
 
-    .start a:hover,
-    .current a:hover {
-        color: #fff;
-    }
+  .goal {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    background-color: #efefef;
+    gap: 1em;
+    padding: 1em;
+    border: 2px solid var(--primary);
+    margin-bottom: 1em;
+  }
 
+  .goals {
+    border: 1px solid #353535;
+    padding: 1em;
+  }
 
-    .goal {
-        display: grid;
-        background-color: #efefef;
-        gap: 1em;
-        padding: 2em;
-        border: 2px solid var(--primary);
-        margin-bottom: 1em;
-    }
+  .game {
+    margin-top: 2em;
+  }
 
-    .game {
-        margin-top: 2em;
-    }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 0;
+    text-transform: uppercase;
+    font-family: var(--headerFont);
+    color: var(--headerColor);
+  }
 
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-        margin: 0;
-        text-transform: uppercase;
-        font-family: var(--headerFont);
-        color: var(--headerColor);
-    }
+  .title {
+    margin-bottom: 1em;
+    margin-top: 0.5em;
+  }
 
-    .title {
-        margin-bottom: 1em;
-        margin-top: .5em;
-    }
+  p,
+  li,
+  a,
+  button {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.5em;
+  }
 
-    p,
-    li,
-    a,
-    button {
-        margin: 0;
-        font-size: 1rem;
-        line-height: 1.5em;
-    }
+  button:hover {
+    background-color: #fff;
+  }
 
-    p,
-    li {
-        color: #353535;
-    }
+  p,
+  li {
+    color: #353535;
+  }
 
-    button {
-        padding: 2em;
-        border-radius: 0.5em;
-        background-color: var(--primaryLight);
-        border: 5px solid var(--secondaryLight);
-    }
+  li {
+    margin-left: 1em;
+  }
 
-    a:hover,
-    button:hover {
-        cursor: pointer;
-    }
+  li .note {
+    border: 1px solid var(--primary);
+    padding: 3px;
+    background-color: beige;
+    list-style: none;
+    
+  }
 
-    .skip {
-        z-index: -1111111;
-        position: absolute;
-        top: 0;
-        left: 0;
-        opacity: 0;
-    }
+  button {
+    padding: 1em;
+    border-radius: 0.5em;
+    background-color: var(--primaryLight);
+    border: 5px solid var(--secondaryLight);
+  }
+
+  a:hover,
+  button:hover {
+    cursor: pointer;
+  }
+
+  .skip {
+    z-index: -1111111;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+  }
 }

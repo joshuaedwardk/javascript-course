@@ -15,6 +15,20 @@
 
         <div class="goal">
             <h2>Goal </h2>
+            <ol>
+                <li>Objects</li>
+                <li>Built-in Objects
+                    <ul>
+                        <li>JSON (JavaScript Object Notation) stores as variable
+                            <ul>
+                                <li>Converting back and forth in JSON to JavaScript</li>
+                                <li class="note">JSON does not support Function</li>
+                            </ul>
+                            </li>
+                        <li><a href="08-rock-paper-scissors.html">localStorage - Save values more permanently</a></li>
+                    </ul>
+                </li>
+            </ol>
         </div>
 
         <div class="video">
@@ -23,6 +37,9 @@
             </div>
             <div class="current">
                 <a href="https://youtu.be/EerdGm-ehJQ?t=17282" target="_blank"> Current: Built in Objects</a>
+            </div>
+            <div class="end">
+                <a href="#" target="_blank">End</a>
             </div>
         </div>
     </div>
@@ -82,6 +99,17 @@
 
     console.log(typeof console) /*=object*/
     console.log(typeof console.log) /*=function*/
+
+    /* Creating a JSON */
+    JSON.stringify(product2);    
+    console.log(JSON.stringify(product2));
+
+    /* Convert: JSON -> JavaScript Object: JSON.parse()    */
+    const jsonString = JSON.stringify(product2)
+
+ 
+
+    console.log(JSON.parse(jsonString));
 
 </script>
 

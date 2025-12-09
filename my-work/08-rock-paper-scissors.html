@@ -6,31 +6,42 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Rock Paper Scissors</title>
   <link rel="stylesheet" href="assets/css/style.css">
-  
+
 </head>
 
 <body>
   <div class="container">
     <h1 class="title">Rock Paper Scissors</h1>
-    
+    <h2 class="title">Algorithm (Rock Paper Scissors)</h2>
+
     <div class="goal">
-      <h2>Algorithm (Rock Paper Scissors)</h2>
-      <h3>When Clicking the button:</h3>
-      <ol>
-        <li>Computer randomly selects a move</li>
-        <li>compare the move to get the result</li>
-        <li>update a score</li>
-        <li>display the results in a pop up</li>
-      </ol>
+      <div class="goals">
+       <h3>When Clicking the button:</h3>
+        <ol>
+          <li>Computer randomly selects a move</li>
+          <li>compare the move to get the result</li>
+          <li>update a score</li>
+          <li>display the results in a pop up</li>
+        </ol>
+      </div>
+
+      <div class="goals">
+        <h3>localStorage</h3>
+        <p>localStorage: it only stores strings</p>
+      </div>
     </div>
-    
+
     <div class="video">
       <div class="start">
-       <a href="https://youtu.be/EerdGm-ehJQ?t=15195" target="_blank">Start</a>
+        <a href="https://youtu.be/EerdGm-ehJQ?t=15195" target="_blank">Start</a>
       </div>
       <div class="current">
-       <a href="https://youtu.be/EerdGm-ehJQ?t=16657" target="_blank">Current</a>
+        <a href="https://youtu.be/EerdGm-ehJQ?t=18255" target="_blank">Current</a>
       </div>
+      <div class="review">
+        <a href="https://youtu.be/EerdGm-ehJQ?t=18041" target="_blank">Review Section</a>
+      </div>
+      <div class="end"><a href="" target="_blank">Project Links</a></div>
     </div>
 
 
@@ -55,6 +66,8 @@
     score.win = 0;
     score.loss = 0;
     score.tie = 0;
+    /* remove item to reset score */
+    localStorage.removeItem('score');
   ">Reset Score</button>
     </div>
   </div>
@@ -62,11 +75,27 @@
 </body>
 
 <script>
-  const score = {
+  const score = JSON.parse(localStorage.getItem('score'));
+/* replacing below code with: const score = JSON.parse(localStorage.getItem('score'));    
+const score = {
     win: 0,
     loss: 0,
     tie: 0,
+    }
+    */  
+
+  if (score === null) {
+      score = {
+        win: 0,
+        loss: 0,
+        tie: 0,
+      }
   }
+
+
+
+  /* call localStorage */
+  /* console.log(JSON.parse(localStorage.getItem('score'))) */
 
   function playGame(playerMove) {
     const computerMove = pickComputerMove();
@@ -115,6 +144,13 @@
     } else if (result === 'TIE') {
       score.tie += 1;
     }
+
+    /* localStorage information here */
+    /* localStorage only support STRINGS -- CONVERT it to a string by JSON.stringify */
+    localStorage.setItem('score', 'score');
+
+    localStorage.setItem('score', JSON.stringify(score));
+
 
     alert(`You picked ${playerMove}. Computer Picked ${computerMove}. ${result}
 Wins: ${score.win} Looses: ${score.loss} Ties: ${score.tie}`);
