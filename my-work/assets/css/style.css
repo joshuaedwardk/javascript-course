@@ -1,18 +1,32 @@
 @media only screen and (min-width: 0rem) {
   :root {
+    /* color */
     --primary: #001f3f;
     --primaryLight: #43b7ff;
     --secondary: #43b7ff;
     --secondaryLight: #001f3f;
     --third: #990000;
     --thirdLight: #f3697e;
+    /* specific-colors */
     --headerColor: #1a1a1a;
     --bodyTextColor: #4e4b66;
     --bodyTextColorWhite: #fafbfc;
-    --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
+    --note: #f5f5db;
+    /* color-bg */
+    --backgroundPrimary: #fff;
+    --backgroundSecondary: #efefef;
+
+    /*fonts*/
+    --h1: clamp(2.5rem, 5vw + 1rem, 4rem);
+    --h2: clamp(2.2rem, 4vw + 1rem, 2.5rem);
+    --h3: clamp(1.9375rem, 3.5vw, 2.75rem);
+    --h4: clamp(1.5rem, 2.8vw, 2.25rem);
+    --h5: clamp(1.3rem, 2.5vw, 1.7rem);
+    --bodyFontSize: clamp(1rem, 2.3vw, 1.5rem);
     --headerFontSize: clamp(1.9375rem, 2.9vw, 3.0625rem);
-    --bodyFontSize: clamp(1.2rem, 2.3vw, 1.5rem);
+
     --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+    /*style*/
     --headerFont: "Oswald", Arial, sans-serif;
     --bodyFont: "Source Sans 3", Arial, sans-serif;
     --navNeon: "Yellowtail", "Adjusted Verdana Fallback", "Verdana", sans-serif;
@@ -24,7 +38,7 @@
     overflow-x: hidden;
     padding: 0;
     font-family: var(--bodyFont);
-    font-size: 100%;
+    font-size: var(--bodyFontSize);
     color: var(--bodyTextColor);
     scroll-behavior: smooth;
   }
@@ -32,19 +46,21 @@
   *,
   *:before,
   *:after {
-    margin: 0;
     box-sizing: border-box;
-    padding: 0;
   }
 
   body {
+    min-height: 100vh;
     transition: background-color 0.3s;
   }
 
   .container {
     position: relative;
-    margin: auto;
-    width: 90%;
+    margin: 0 auto;
+    width: min(50em, 90%);
+    border-radius: 1em;
+    background-color: var(--backgroundPrimary);
+    padding: 2em;
   }
 
   .video {
@@ -70,20 +86,21 @@
   .current a,
   .review a,
   .end a {
-    color: #efefef;
+    color: var(--backgroundSecondary);
   }
 
   .start a:hover,
   .current a:hover,
   .review a:hover,
   .end a:hover {
-    color: #fff;
+    color: var(--backgroundPrimary);
+    font-family: var(--navNeon);
   }
 
   .goal {
     display: grid;
     grid-template-columns: repeat(2, auto);
-    background-color: #efefef;
+    background-color: var(--backgroundSecondary);
     gap: 1em;
     padding: 1em;
     border: 2px solid var(--primary);
@@ -91,7 +108,7 @@
   }
 
   .goals {
-    border: 1px solid #353535;
+    border: 1px solid var(--primary);
     padding: 1em;
   }
 
@@ -99,16 +116,59 @@
     margin-top: 2em;
   }
 
+  /* --- All Headings (H1 through H6) Shared Styles --- */
   h1,
   h2,
   h3,
   h4,
   h5,
   h6 {
+    /* Resetting browser default margin/padding for consistency */
     margin: 0;
+
+    /* Applying defined color and font variables */
+    font-family: var(--headerFont, sans-serif);
+    color: var(--headerColor, #333);
+
+    /* Styling (Note: H6 often does not need to be uppercase, but I kept the original style) */
     text-transform: uppercase;
-    font-family: var(--headerFont);
-    color: var(--headerColor);
+    font-weight: 700;
+    /* Recommended: Define a specific weight for headings */
+    line-height: 1.2;
+    /* Recommended: Adjust line height for better readability */
+  }
+
+  /* --- Individual Fluid Font Sizing --- */
+
+  /* H1 (Largest) */
+  h1 {
+    font-size: var(--h1);
+  }
+
+  /* H2 (Second Largest) */
+  h2 {
+    font-size: var(--h2);
+  }
+
+  /* H3 (Medium-Large) */
+  h3 {
+    font-size: var(--h3);
+  }
+
+  /* H4 (Medium) */
+  h4 {
+    font-size: var(--h4);
+  }
+
+  /* H5 (Close to body text max size) */
+  h5 {
+    font-size: var(--h5);
+  }
+
+  /* H6 (Smallest Heading - requires a new variable if not defined) */
+  h6 {
+    font-size: var(--h6, var(--bodyFontSize));
+    /* Defaults to a variable for consistency, or body size if --h6 isn't set */
   }
 
   .title {
@@ -121,17 +181,13 @@
   a,
   button {
     margin: 0;
-    font-size: 1rem;
+    font-size: var(--bodyFontSize);
     line-height: 1.5em;
-  }
-
-  button:hover {
-    background-color: #fff;
   }
 
   p,
   li {
-    color: #353535;
+    color: var(--bodyTextColor);
   }
 
   li {
@@ -141,9 +197,9 @@
   li .note {
     border: 1px solid var(--primary);
     padding: 3px;
-    background-color: beige;
+    background-color: var(--note);
     list-style: none;
-    
+
   }
 
   button {
@@ -151,6 +207,11 @@
     border-radius: 0.5em;
     background-color: var(--primaryLight);
     border: 5px solid var(--secondaryLight);
+  }
+
+  button:hover {
+    background-color: var(--backgroundPrimary);
+    font-family: var(--navNeon);
   }
 
   a:hover,
