@@ -141,4 +141,50 @@ Any value not on the falsy list is a truthy.
 ## Chapter 7 Done - will add notes later
 
 ## Chapter 8 Objects [Youtube Link](https://youtu.be/EerdGm-ehJQ?t=15682)
+# Exercises
+![Exercises 8](https://user-images.githubusercontent.com/70604577/229874144-fc148193-4e66-4312-9b6b-46e431b6dbf9.png)
+![Exercises 8 2](https://user-images.githubusercontent.com/70604577/229874138-1d9f2261-00c2-4a41-9dff-dd33e49a450d.png)
+![Exercises 8 3](https://user-images.githubusercontent.com/70604577/229874142-74a004c6-db7a-487e-9ab0-f7b2e45554a9.png)
 
+
+Here are the links mentioned in the JavaScript Course:
+
+### Lesson 1 - 12
+HTML CSS Full course: https://youtu.be/G3e-cpL7ofc
+
+A.I. tool for searching for code: https://chat.openai.com/chat
+
+### Lesson 13
+Starting code for the Amazon project: https://github.com/SuperSimpleDev/javascript-amazon-project
+
+Git installation instructions: https://git-scm.com/downloads
+
+Git and GitHub Full Course: https://youtu.be/hrTQipWp6co
+
+### Lesson 15
+Hello external library: https://unpkg.com/supersimpledev@1.0.1/hello.js
+
+DayJS external library: https://unpkg.com/dayjs@1.11.10/dayjs.min.js
+
+Hello (ESM version): https://unpkg.com/supersimpledev@1.0.1/hello.esm.js
+
+DayJS (ESM version): https://unpkg.com/supersimpledev@8.5.0/dayjs/esm/index.js
+
+How to Put a Website on the Internet: https://youtu.be/p1QU3kLFPdg
+
+### Lesson 16
+Jasmine Testing Framework: https://github.com/jasmine/jasmine/releases/tag/v5.1.1
+
+Jasmine Documentation: https://jasmine.github.io/api/5.1/global
+
+### Lesson 17
+Clothing size chart image: https://supersimple.dev/images/clothing-size-chart.png
+
+Appliance instructions image: https://supersimple.dev/images/appliance-instructions.png
+
+Appliance warranty image: https://supersimple.dev/images/appliance-warranty.png
+
+### Lesson 18
+SuperSimpleBackendDev documentation: https://supersimplebackend.dev/documentation
+
+Put a Website on the Internet: https://youtu.be/p1QU3kLFPdg

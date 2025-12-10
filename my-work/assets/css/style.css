@@ -17,14 +17,12 @@
     --backgroundSecondary: #efefef;
 
     /*fonts*/
-    --h1: clamp(2.5rem, 5vw + 1rem, 4rem);
-    --h2: clamp(2.2rem, 4vw + 1rem, 2.5rem);
-    --h3: clamp(1.9375rem, 3.5vw, 2.75rem);
-    --h4: clamp(1.5rem, 2.8vw, 2.25rem);
-    --h5: clamp(1.3rem, 2.5vw, 1.7rem);
-    --bodyFontSize: clamp(1rem, 2.3vw, 1.5rem);
-    --headerFontSize: clamp(1.9375rem, 2.9vw, 3.0625rem);
-
+    --h1: clamp(2.0rem, 4.5vw + 1rem, 3rem);
+    --h2: clamp(1.75rem, 3.5vw + 1rem, 2.5rem);
+    --h3: clamp(1.5rem, 3vw + 1rem, 2.25rem);
+    --h4: clamp(1.3rem, 2.7vw + 1rem, 2rem);
+    --h5: clamp(1.1rem, 2.25vw + 1rem, 1.7rem);
+    --bodyFontSize: clamp(1rem, 2vw + 1rem, 1.5rem);
     --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
     /*style*/
     --headerFont: "Oswald", Arial, sans-serif;
@@ -57,49 +55,21 @@
   .container {
     position: relative;
     margin: 0 auto;
-    width: min(50em, 90%);
+    width: min(50em, 95%);
     border-radius: 1em;
     background-color: var(--backgroundPrimary);
     padding: 2em;
   }
 
   .video {
-    display: grid;
-    grid-template-columns: repeat(4, auto);
+
     background-color: var(--bodyTextColorWhite);
     gap: 1em;
     padding: 1em;
     border: 2px solid var(--primary);
   }
 
-  .start,
-  .current,
-  .review,
-  .end {
-    display: grid;
-    padding: 1em;
-    background-color: var(--third);
-    border: 2px solid var(--secondaryLight);
-  }
-
-  .start a,
-  .current a,
-  .review a,
-  .end a {
-    color: var(--backgroundSecondary);
-  }
-
-  .start a:hover,
-  .current a:hover,
-  .review a:hover,
-  .end a:hover {
-    color: var(--backgroundPrimary);
-    font-family: var(--navNeon);
-  }
-
   .goal {
-    display: grid;
-    grid-template-columns: repeat(2, auto);
     background-color: var(--backgroundSecondary);
     gap: 1em;
     padding: 1em;
@@ -116,59 +86,67 @@
     margin-top: 2em;
   }
 
-  /* --- All Headings (H1 through H6) Shared Styles --- */
+  .start,
+  .current,
+  .review,
+  .projects {
+    display: grid;
+    padding: 1em;
+    background-color: var(--third);
+    border: 2px solid var(--secondaryLight);
+  }
+
+  .start a,
+  .current a,
+  .review a,
+  .projects a {
+    color: var(--backgroundSecondary);
+  }
+
+  .start a:hover,
+  .current a:hover,
+  .review a:hover,
+  .projects a:hover {
+    color: var(--backgroundPrimary);
+    font-family: var(--navNeon);
+  }
+
   h1,
   h2,
   h3,
   h4,
   h5,
   h6 {
-    /* Resetting browser default margin/padding for consistency */
     margin: 0;
-
-    /* Applying defined color and font variables */
     font-family: var(--headerFont, sans-serif);
     color: var(--headerColor, #333);
-
-    /* Styling (Note: H6 often does not need to be uppercase, but I kept the original style) */
     text-transform: uppercase;
     font-weight: 700;
-    /* Recommended: Define a specific weight for headings */
     line-height: 1.2;
-    /* Recommended: Adjust line height for better readability */
   }
 
-  /* --- Individual Fluid Font Sizing --- */
-
-  /* H1 (Largest) */
   h1 {
     font-size: var(--h1);
   }
 
-  /* H2 (Second Largest) */
   h2 {
     font-size: var(--h2);
   }
 
-  /* H3 (Medium-Large) */
   h3 {
     font-size: var(--h3);
   }
 
-  /* H4 (Medium) */
   h4 {
     font-size: var(--h4);
   }
 
-  /* H5 (Close to body text max size) */
   h5 {
     font-size: var(--h5);
   }
 
-  /* H6 (Smallest Heading - requires a new variable if not defined) */
   h6 {
     font-size: var(--h6, var(--bodyFontSize));
-    /* Defaults to a variable for consistency, or body size if --h6 isn't set */
   }
 
   .title {
@@ -225,5 +203,42 @@
     top: 0;
     left: 0;
     opacity: 0;
+  }
+
+  /* Navigation */
+  .nav {
+    position: -webkit-sticky;
+    /* Safari */
+    position: sticky;
+  }
+
+  .nav-grid-container {
+    display: grid;
+    gap: 1em;
+    grid-template-columns: 1fr 3fr;
+    align-items: center;
+
+    overflow: hidden;
+    background-color: var(--backgroundSecondary);
+  }
+
+  .nav-grid-image {
+    background-color: #f5eb35;
+    border: 1px solid #001f3f;
+    padding: 1em;
+  }
+
+  .nav-grid-body {
+    display: grid;
+    grid-template-columns: repeat(6, auto);
+  }
+
+  #nav-expanded,
+  .nav-item {
+    align-items: center;
+    height: 100%;
+    padding: 0;
+    list-style: none;
+    border: 1px solid #001f3f;
   }
 }
