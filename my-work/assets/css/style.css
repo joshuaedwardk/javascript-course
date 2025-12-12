@@ -6,16 +6,20 @@
     --secondary: #43b7ff;
     --secondaryLight: #001f3f;
     --third: #990000;
-    --thirdLight: #f3697e;
+    --thirdLight: #99000060;
+    --thirdLightOpp: #99000020;
     /* specific-colors */
     --headerColor: #1a1a1a;
     --bodyTextColor: #4e4b66;
     --bodyTextColorWhite: #fafbfc;
-    --note: #f5f5db;
+    --bodyNoteCode: #ffff74;
     /* color-bg */
     --backgroundPrimary: #fff;
     --backgroundSecondary: #efefef;
-    --color-background-secondary: light-dark(var(--color-gray-80), var(--color-gray-20));
+    /*gradiant*/
+    /* background-image: var(--gradiant); */
+    --gradiant: linear-gradient(to right bottom, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+
 
     /*fonts*/
     --h1: clamp(2.25rem, 2.05rem + 3vw, 2.5rem);
@@ -24,6 +28,7 @@
     --h4: clamp(1.5rem, 1.3rem + 3vw, 1.75rem);
     --h5: clamp(1.25rem, 1.05rem + 3vw, 1.5rem);
     --bodyFontSize: clamp(1rem, 0.8rem + 3vw, 1.25rem);
+    --bodyFontSmall: clamp(0.75rem, 0.6rem + 3vw, 0.9rem);
     --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
     /*style*/
     --headerFont: "Oswald", Arial, sans-serif;
@@ -53,65 +58,65 @@
 
   body {
     min-height: 100vh;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s; 
   }
 
   .container {
     position: relative;
     margin: 0 auto;
-    width: min(50em, 95%);
+    width: min(50em, 98%);
     border-radius: 1em;
+    padding: 1em;
+  }
+
+  /*Goal Section */
+
+  .goal-container {
     background-color: var(--backgroundPrimary);
-    padding: 1em;
+    display: grid;
+    grid-gap: .5em;
+    margin-top: 2em;
+    border-top: 9px solid var(--primary);
+    box-shadow: 0px 10px 40px -10px rgba(0, 64, 128, 0.2);
   }
 
-  .video {
-    background-color: var(--bodyTextColorWhite);
-    gap: 1em;
-    padding: 1em;
-    border: 2px solid var(--primary);
-  }
-
-  .goal {
-    background-color: var(--backgroundPrimary);
-    gap: 1em;
-    padding: 1em;
-    border: 2px solid var(--primary);
-    margin-bottom: 1em;
-  }
-
-  .goals {
+  .goal-chapter {
+    padding: 1em 0 1em 0;
     border: 1px solid var(--primary);
+  }
+
+  .goal-item-body {
+    font-size: var(--bodyFontSmall);
+    border-top: 1px solid var(--primary);
+    border-bottom: .5em solid var(--primary);
     padding: 1em;
+  }
+
+  .goal-item-video {
+    display: grid;
+    grid-gap: .25em;
+    min-height: 3em;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+
+  .goal-chapter .goal-item-video .video-element {
+    background-color: var(--third);
+    border: 1px solid var(--primary);
+    color: var(--backgroundSecondary);
+    min-height: 3em;
+    padding: .5em;
+  }
+
+  .goal-chapter .goal-item-video .video-element:hover {
+    background-color: var(--thirdLight);
+  }
+
+  .video-element a {
+    color: var(--backgroundSecondary);
   }
 
   .game {
     margin-top: 2em;
-  }
-
-  .start,
-  .current,
-  .review,
-  .projects {
-    display: grid;
-    padding: 1em;
-    background-color: var(--third);
-    border: 2px solid var(--secondaryLight);
-  }
-
-  .start a,
-  .current a,
-  .review a,
-  .projects a {
-    color: var(--backgroundSecondary);
-  }
-
-  .start a:hover,
-  .current a:hover,
-  .review a:hover,
-  .projects a:hover {
-    color: var(--backgroundPrimary);
-    font-family: var(--navNeon);
   }
 
   h1,
@@ -154,40 +159,53 @@
   .title {
     margin-bottom: 1em;
     margin-top: 0.5em;
+    text-align: center;
   }
 
   p,
-  li,
   a,
-  button {
+  button,
+  p {
     margin: 0;
     font-size: var(--bodyFontSize);
     line-height: 1.5em;
     text-wrap: pretty;
     overflow-wrap: break-word;
-  }
-
-  p,
-  li {
     color: var(--bodyTextColor);
   }
 
-  li {
-    margin-left: clamp(.5em 1vw + 1, 2em);
+  /*list*/
+  ul,
+  ol {
+    padding-left: 3.5vw;
+    line-height: 1.1rem;
+    text-wrap: pretty;
+    font-size: var(--bodyFontSmall);
+  }
+
+  ol a {
+    font-size: var(--bodyFontSmall);
+    color: #990000;
+  }
+
+  ul a {
+    font-size: var(--bodyFontSmall);
+    color: #990000;
   }
 
   li .note {
     border: 1px solid var(--primary);
     padding: 3px;
-    background-color: var(--note);
+    background-color: var(--bodyNoteCode);
     list-style: none;
-
+    font-size: var(--bodyFontSmall);
   }
 
-  code {
+  li code {
     border-radius: var(--radius-normal);
     padding: .125em .25em;
-    background-color: var(--color-background-secondary);
+    background-color: var(--bodyNoteCode);
+    font-size: var(--bodyFontSmall);
   }
 
   button {

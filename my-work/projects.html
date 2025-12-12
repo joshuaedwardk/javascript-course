@@ -7,179 +7,237 @@
     <title>Listng all Projects</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="style.css">
-    <link rel="preload" href="/static/client/jetbrains-mono-latin.119994ed445212c7.woff2" as="font" type="font/woff2" crossorigin="anonymous" fetchpriority="low">
+    <link rel="preload" href="/static/client/jetbrains-mono-latin.119994ed445212c7.woff2" as="font" type="font/woff2"
+        crossorigin="anonymous" fetchpriority="low">
 </head>
 
 <body>
-        <nav>
+    <nav>
         <div class="nav-grid-container">
             <div class="nav-grid-image">
                 <img src="assets/img/Mess with the glock-Clean.png" height="20" alt="">
             </div>
             <ul class="nav-grid-body" id="nav-expanded">
-                <li class="nav-item"><a href="04-website.html">Chapter 4</a></li>
-                <li class="nav-item"><a href="05-cart-quantity.html">Chapter 5</a></li>
-                <li class="nav-item"><a href="05-cart-quantity.html">Chapter 5</a></li>
-                <li class="nav-item"><a href="05-cart-quantity.html">Chapter 5</a></li>
-                <li class="nav-item"><a href="05-cart-quantity.html">Chapter 5</a></li>
-                <li class="nav-item"><a href="05-cart-quantity.html">Chapter 5</a></li>
-                </ul>
+                <li class="nav-item"><a href="#chapter4">4</a></li>
+                <li class="nav-item"><a href="#chapter5">5</a></li>
+                <li class="nav-item"><a href="#chapter6">6</a></li>
+                <li class="nav-item"><a href="#chapter7">7</a></li>
+                <li class="nav-item"><a href="#chapter8">8</a></li>
+                <li class="nav-item"><a href="#chapter9">9</a></li>
+            </ul>
         </div>
     </nav>
 
     <div class="container">
-        <div class="goal">
-            <div class="goals">
-                <h2>Chapter 4</h1>
-                    <p>Put some Copy here</p>
-            </div>
-            <div class="goals">
-                <h2>Chapter 5</h1>
-                    <p>Put some Copy here</p>
-            </div>
-            <div class="goals">
-                <h2>Chapter 6</h1>
-                    <div>
-                        <h3>variables</h3>
-                        <ul>
-                            <li>const - cannot change always default</li>
-                            <li>let - can change 2nd choice</li>
-                            <li>var - outdate</li>
-                        </ul>
-                        <div>&nbsp;</div>
-                        <h4>Syntax rules</h4>
-                        <div>Boolean do not surround with ' '</div>
-                        <br /><br />
-                        <h3>type of</h3>
-                        <br />
-                        <div>console.log(typeof ) returns data type to us</div>
-                        <ol>
-                            <li>undefined</li>
-                            <li>null</li>
-                            <li>symbol</li>
-                            <li>bigint</li>
-                            <li>boolean</li>
-                            <li>number</li>
-                            <li>string</li>
-                        </ol>
-                        <ul>
-                            <li>typeof "John" // Returns string</li>
-                            <li>typeof ("John"+"Doe") // Returns string</li>
-                            <li>typeof 3.14 // Returns number</li>
-                            <li>typeof 33 // Returns number</li>
-                            <li>typeof (33 + 66) // Returns number</li>
-                            <li>typeof true // Returns boolean</li>
-                            <li>typeof false // Returns boolean</li>
-                            <li>typeof 1234n // Returns bigint</li>
-                            <li>typeof Symbol() // Returns symbol</li>
-                            <li>typeof x // Returns undefined</li>
-                        </ul>
-                        <ul>
-                            <li>## &lt;a name="ComparisonOperators"&gt;Comparison Operators&lt;/a&gt;</li>
-                            <li>* &gt; Greater than</li>
-                            <li>* &lt; Less than</li>
-                            <li>* &gt;= greater than or equal to</li>
-                            <li>* &lt;= less than or equal to</li>
-                            <li>* === equal to</li>
-                            <li>* !== not equal to</li>
-                            <li>#### Math.random</li>
-                            <li>console.log(Math.floor(Math.random() * 10 / 3))
-                                [https://josephcardillo.medium.com/using-math-random-in-javascript-c49eff920b11]</li>
-                            <li>### Logical Operators</li>
-                            <li>Let us combinme boolean values</li>
-                            <li>#### OR Operator ||</li>
-                            <li>// Logical And Opperator</li>
-                            <li>console.log(true &amp;&amp; false);</li>
-                            <li>console.log(0.2 &gt;= 0 &amp;&amp; 0.2 &lt; 1 / 3);</li>
-                            <li>/* OR Operator || Checks if at least 1 side is true */</li>
-                            <li>console.log(true || false);</li>
-                            <li>/* Not Operator ! It flips the operator */</li>
-                            <li>console.log(!true);</li>
-                            <li>## Scope - limits where variable exists</li>
-                            <li>### Any variable we create {....}</li>
-                            <li>### Will only exist inside the {....}</li>
-                            <li>Scopes help us avoid naming conflicts</li>
-                            <li>Doesnt work:</li>
-                            <li>const randomNumber = Math.random();</li>
-                            <li>if (randomNumber &gt;= 0 &amp;&amp; randomNumber &lt; 1 / 3) {</li>
-                            <li>const computerMove = 'Rock';</li>
-                            <li>} else if (randomNumber &gt;= 1 / 3 &amp;&amp; randomNumber &lt; 2 / 3) {</li>
-                            <li>const computerMove = 'paper';</li>
-                            <li>} else if (randomNumber &gt;= 2 / 3 &amp;&amp; randomNumber &lt; 1) {</li>
-                            <li>const computerMove = 'scissors';</li>
-                            <li>}</li>
-                            <li>console.log(computerMove);</li>
-                            <li>"&gt;</li>
-                            <li>/*const age = 30;</li>
-                            <li>if (age &gt;= 16) {</li>
-                            <li>console.log('I AM OLD');</li>
-                            <li>console.log('GREAT');</li>
-                            <li>}</li>
-                            <li>else if (age &gt;= 14) {</li>
-                            <li>console.log('TRY HARDER');</li>
-                            <li>}</li>
-                            <li>else {</li>
-                            <li>console.log('I AM A CHILD');</li>
-                            <li>}*/</li>
-                            <li>## Truthy &amp; Falsey</li>
-                            <li>This wont show it behaves as a false.</li>
-                            <li>if (0) {</li>
-                            <li>console.log('truthy');</li>
-                            <li>}</li>
-                            <li>## Falsy values:</li>
-                            <li>* false</li>
-                            <li>* 0</li>
-                            <li>* ''</li>
-                            <li>* NaN</li>
-                            <li>* undefined</li>
-                            <li>* null</li>
-                            <li>Any value not on the falsy list is a truthy.</li>
-                        </ul>
+        <div class="goal-container">
+            <div class="goal-chapter" id="chapter4">
+                <h3 class="title">Chapter 4</h3>
+                <div class="goal-item-body">
+                    <ul>
+                        <li>Goal Items</li>
+                    </ul>
+                </div>
+                <div class="goal-item-video">
+
+                    <div class="video-element">
+                        <a href="https://youtu.be/EerdGm-ehJQ?t=15195" target="_blank">Start</a>
                     </div>
+                    <div class="video-element">
+                        <a href="https://youtu.be/EerdGm-ehJQ?t=17450" target="_blank">Current</a>
+                    </div>
+                    <div class="video-element">
+                        <a href="https://youtu.be/EerdGm-ehJQ?t=18041" target="_blank">Review Section</a>
+                    </div>
+                    <div class="video-element">
+                        <a href="https://youtu.be/EerdGm-ehJQ?t=19488" target="_blank">In this Lesson</a>
+                    </div>
+                    <div class="video-element">
+                        <a href="https://youtu.be/EerdGm-ehJQ?t=19524" target="_blank">Exercises</a>
+
+                    </div>
+
+                </div>
             </div>
-            <div class="goals">
-                <h2>Chapter 7</h1>
-                    <p>Put some Copy here</p>
+            <div class="goal-chapter" id="chapter5">
+                <h3 class="title">Chapter 5</h3>
+                <div class="goal-item-body">
+                    <ul>
+                        <li>Goal Items</li>
+                    </ul>
+                </div>
+                <div class="goal-item-video">
+
+                    <div class="video-element">
+                        <a href="https://youtu.be/EerdGm-ehJQ?t=15195" target="_blank">Start</a>
+                    </div>
+                    <div class="video-element">
+                        <a href="https://youtu.be/EerdGm-ehJQ?t=17450" target="_blank">Current</a>
+                    </div>
+                    <div class="video-element">
+                        <a href="https://youtu.be/EerdGm-ehJQ?t=18041" target="_blank">Review Section</a>
+                    </div>
+                    <div class="video-element">
+                        <a href="https://youtu.be/EerdGm-ehJQ?t=19488" target="_blank">In this Lesson</a>
+                    </div>
+                    <div class="video-element">
+                        <a href="https://youtu.be/EerdGm-ehJQ?t=19524" target="_blank">Exercises</a>
+                    </div>
+                </div>
+
             </div>
-            <div class="goals" id="chapter8">
-                <h3>Chapter 8</h1>
-       
-                    <div class="goal-item">
-                        <h4>in this lesson</h3>
+            <div class="goal-chapter" id="chapter6">
+                <h3 class="title">Chapter 6</h3>
+                <div class="goal-item-body">
+                    <ul>
+                        <li>Goal Items</li>
+                    </ul>
+                </div>
+                <div class="goal-item-video">
+                    <div class="video-element">
+                        <a href="https://youtu.be/EerdGm-ehJQ?t=15195" target="_blank">Start</a>
+                    </div>
+                    <div class="video-element">
+                        <a href="https://youtu.be/EerdGm-ehJQ?t=17450" target="_blank">Current</a>
+                    </div>
+                    <div class="video-element">
+                        <a href="https://youtu.be/EerdGm-ehJQ?t=18041" target="_blank">Review Section</a>
+                    </div>
+                    <div class="video-element">
+                        <a href="https://youtu.be/EerdGm-ehJQ?t=19488" target="_blank">In this Lesson</a>
+                    </div>
+                    <div class="video-element">
+                        <a href="https://youtu.be/EerdGm-ehJQ?t=19524" target="_blank">Exercises</a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="goal-chapter" id="chapter7">
+                <h3 class="title">Chapter 7</h3>
+                <div class="goal-item-body">
+                    <ul>
+                        <li>Goal Items</li>
+                    </ul>
+                </div>
+                <div class="goal-item-video">
+                    <div class="video-element">
+                        <a href="https://youtu.be/EerdGm-ehJQ?t=15195" target="_blank">Start</a>
+                    </div>
+                    <div class="video-element">
+                        <a href="https://youtu.be/EerdGm-ehJQ?t=17450" target="_blank">Current</a>
+                    </div>
+                    <div class="video-element">
+                        <a href="https://youtu.be/EerdGm-ehJQ?t=18041" target="_blank">Review Section</a>
+                    </div>
+                    <div class="video-element">
+                        <a href="https://youtu.be/EerdGm-ehJQ?t=19488" target="_blank">In this Lesson</a>
+                    </div>
+                    <div class="video-element">
+                        <a href="https://youtu.be/EerdGm-ehJQ?t=19524" target="_blank">Exercises</a>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="goal-chapter" id="chapter8">
+                <h3 class="title">Chapter 8</h3>
+
+                <div class="goal-item-body">
+                    <h4>in this lesson</h4>
+                    <ol>
+                        <li>Objects = group related values together</li>
+                        <li><a href="https://youtu.be/EerdGm-ehJQ?t=17297" target="_blank">Built-in objects (JSON,
+                                localStorage)</a>
                             <ol>
-                                <li>Objects = group related values together</li>
-                                <li>Built-in objects (JSON, localStorage)
-                                    <ol>
-                                        <li>JSON</li>
-                                        <li>localStorage</li>
-                                    </ol>
+                                <li><strong>JSON</strong>
+                                    <ul>
+                                        <li>Javascript Object Notation</li>
+                                        <li>a syntax</li>
+                                        <li>simular to Javascript object <strong>has less features</strong></li>
+                                        <li>all properties and strings must use <strong>"douible quote"</strong></li>
+                                        <li>does not support <strong>function</strong></li>
+                                        <li>JavaScript syntax can only be understood by <strong>Javascript</strong> JSON
+                                            can be understood by every other language, its universal.</li>
+                                        <li><strong>store data</strong>
+                                            <ol>
+                                                <li><strong>Built-in JSON Object</strong></li>
+                                                <li><code><a href="/my-work/08-objects.html" target="_blank">JSON.stringify()</a></code></li>
+                                                <li></li>
+                                                <li></li>
+                                            </ol>
+                                        </li>
+                                    </ul>
                                 </li>
-                                <li>More details about objects (null, auto-boxing, reference)</li>
-                                <li>Shortcuts (destructuring, shorthand property, shorthand method)</li>
-                                <li>The <code>toUpperCase()</code> method of String values returns this string converted to uppercase.</li>
+                                <li><strong>localStorage</strong>
+                                    <ul>
+                                        <li>to use</li>
+                                    </ul>
+                                </li>
                             </ol>
-                            
+                        </li>
+                        <li>More details about objects (null, auto-boxing, reference)</li>
+                        <li>Shortcuts (destructuring, shorthand property, shorthand method)</li>
+                        <li>The <code>toUpperCase()</code> method of String values returns this string converted to uppercase.</li>
+                    </ol>
+                </div>
+
+                <div class="goal-item-video">
+                    <div class="video-element">
+                        <a href="https://youtu.be/EerdGm-ehJQ?t=15195" target="_blank">Start</a>
                     </div>
+                    <div class="video-element">
+                        <a href="https://youtu.be/EerdGm-ehJQ?t=17450" target="_blank">Current</a>
+                    </div>
+                    <div class="video-element">
+                        <a href="https://youtu.be/EerdGm-ehJQ?t=18041" target="_blank">Review Section</a>
+                    </div>
+                    <div class="video-element">
+                        <a href="https://youtu.be/EerdGm-ehJQ?t=19488" target="_blank">In this Lesson</a>
+                    </div>
+                    <div class="video-element">
+                        <a href="https://youtu.be/EerdGm-ehJQ?t=19524" target="_blank">Exercises</a>
+                    </div>
+                </div>
             </div>
-            <div class="video">
-                <div class="start">
-                    <a href="https://youtu.be/EerdGm-ehJQ?t=15195" target="_blank">Start</a>
+            <div class="goal-chapter" id="chapter9">
+                <h3 class="title">Chapter 9 - Document Object Model (DOM)</h3>
+
+                <div class="goal-item-body">
+                    <h4>In this Lession</h4>
+                    <ol>
+                        <li>Document Object Model</li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ol>
                 </div>
-                <div class="current">
-                    <a href="https://youtu.be/EerdGm-ehJQ?t=18255" target="_blank">Current</a>
-                </div>
-                <div class="review">
-                    <a href="https://youtu.be/EerdGm-ehJQ?t=18041" target="_blank">Review Section</a>
-                </div>
-                <div class="projects">
-                    <a href="https://youtu.be/EerdGm-ehJQ?t=19488" target="_blank">In this Lesson</a>
-                    <a href="https://youtu.be/EerdGm-ehJQ?t=19524" target="_blank">Exercises</a>
+
+                <div class="goal-item-video">
+                    <div class="video-element">
+                        <a href="https://youtu.be/EerdGm-ehJQ?t=19546" target="_blank">Start</a>
+                    </div>
+                    <div class="video-element">
+                        <a href="#" target="_blank">Current</a>
+                    </div>
+                    <div class="video-element">
+                        <a href="#" target="_blank">Review Section</a>
+                    </div>
+                    <div class="video-element">
+                        <a href="#" target="_blank">In this Lesson</a>
+                    </div>
+                    <div class="video-element">
+                        <a href="#" target="_blank">Exercises</a>
+                    </div>
                 </div>
             </div>
         </div>
-
     </div>
-    <script>
+
+
+   <script>
     </script>
 </body>
 
