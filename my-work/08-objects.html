@@ -13,42 +13,67 @@
     <div class="container">
         <h1 class="title">Chapter 8: Objects</h1>
 
-        <div class="goal">
-            <h2>Goal </h2>
-            <ol>
-                <li>Objects</li>
-                <li>Built-in Objects
-                    <ul>
-                        <li>JSON (JavaScript Object Notation) stores as variable
-                            <ul>
-                                <li>Converting back and forth in JSON to JavaScript</li>
-                                <li class="note">JSON does not support Function</li>
-                            </ul>
-                            </li>
-                        <li><a href="08-rock-paper-scissors.html">localStorage - Save values more permanently</a></li>
-                    </ul>
-                </li>
-            </ol>
-        </div>
-
-        <div class="video">
-            <div class="start">
-                <a href="" target="">Start</a>
-            </div>
-            <div class="current">
-                <a href="https://youtu.be/EerdGm-ehJQ?t=17282" target="_blank"> Current: Built in Objects</a>
-            </div>
-            <div class="end">
-                <a href="#" target="_blank">End</a>
-            </div>
-        </div>
+        
     </div>
 </body>
 
 
 <script>
 
-    console.log(50*16);
+    console.log('hello'.length);
+    console.log('hello'.toUpperCase());
+    console.log('Hello'.toLowerCase());
+
+    // copy by references
+    const object1 = {
+        message: 'hello'
+    };
+
+    const object2 = object1;
+
+    object1.message = 'good job!';
+    console.log(object1.message)
+    console.log(object2);
+
+    const object3 = {
+        message: 'good job!'
+    };
+
+    console.log(object1 === object3);
+
+
+    const object4  = {
+        message: 'good job!',
+        price: 799,
+        catagory: 'toy'
+    };
+
+    /* References */
+    /*const message = object4.message*/
+    /*destructure shortcut*/
+    const { message, price, catagory } = object4;
+
+    console.log(message);
+    console.log(price);
+    console.log(catagory);
+
+    const object5 = {
+        // message: message (message: message = message)
+        message,
+        // method: function function1(){
+        //     console.log('method');
+        // }
+
+        /*shorthand method syntax*/
+        method(){
+          console.log('method');
+        }
+    };
+
+    console.log(object5);
+    object5.method();
+
+    // console.log(50*16);
 
     /*const product = {
         name: 'socks',
@@ -72,43 +97,43 @@
     delete product.newProperty;
     console.log(product)*/
 
-    const product2 = {
-        name: 'shirt',
-        'delivery-time': '1 day',
-        /*nested object*/
-        rating: {
-            stars: 5,
-            count: 87
-        },
-        /*Function inside object = Method*/
-        fun: function function1() {
-            console.log('function inside object');
-        }
-    };
+    // const product2 = {
+    //     name: 'shirt',
+    //     'delivery-time': '1 day',
+    //     /*nested object*/
+    //     rating: {
+    //         stars: 5,
+    //         count: 87
+    //     },
+    //     /*Function inside object = Method*/
+    //     fun: function function1() {
+    //         console.log('function inside object');
+    //     }
+    // };
 
-    console.log(product2);
-    /*Bracket Notation*/
-    console.log(product2.name);
-    console.log(product2['name']);
-    /*Why use it*/
-    /*console.log(product2.delivery-time);*/
-    console.log(product2['delivery-time']);
+    // console.log(product2);
+    // /*Bracket Notation*/
+    // console.log(product2.name);
+    // console.log(product2['name']);
+    // /*Why use it*/
+    // /*console.log(product2.delivery-time);*/
+    // console.log(product2['delivery-time']);
 
-    console.log(product2.rating)
-    console.log(product2.rating.count)
+    // console.log(product2.rating)
+    // console.log(product2.rating.count)
 
-    product2.fun();
+    // product2.fun();
 
-    console.log(typeof console) /*=object*/
-    console.log(typeof console.log) /*=function*/
+    // console.log(typeof console) /*=object*/
+    // console.log(typeof console.log) /*=function*/
 
-    /* Creating a JSON */
-    JSON.stringify(product2);    
-    console.log(JSON.stringify(product2));
+    // /* Creating a JSON */
+    // JSON.stringify(product2);    
+    // console.log(JSON.stringify(product2));
 
-    /* Convert: JSON -> JavaScript Object: JSON.parse()    */
-    const jsonString = JSON.stringify(product2)
-    console.log(JSON.parse(jsonString));
+    // /* Convert: JSON -> JavaScript Object: JSON.parse()    */
+    // const jsonString = JSON.stringify(product2)
+    // console.log(JSON.parse(jsonString));
 
 </script>
 

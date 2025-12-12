@@ -85,6 +85,10 @@
     border: 1px solid var(--primary);
   }
 
+  .goal-chapter .files {
+    padding: 1em;
+  }
+
   .goal-item-body {
     font-size: var(--bodyFontSmall);
     border-top: 1px solid var(--primary);
@@ -181,6 +185,7 @@
     line-height: 1.1rem;
     text-wrap: pretty;
     font-size: var(--bodyFontSmall);
+    
   }
 
   ol a {
@@ -206,7 +211,7 @@
     padding: .125em .25em;
     background-color: var(--bodyNoteCode);
     font-size: var(--bodyFontSmall);
-  }
+   }
 
   button {
     padding: 1em;
@@ -272,7 +277,10 @@
     border: 1px solid #001f3f;
   }
 
+/* images */
 
+
+/* fonts */
 @font-face {
   font-style: normal;
   font-family: "Oswald";

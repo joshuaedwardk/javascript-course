@@ -140,9 +140,14 @@
             </div>
             <div class="goal-chapter" id="chapter8">
                 <h3 class="title">Chapter 8</h3>
-
+                <div class="files">
+                    <p><a href="/my-work/08-objects.html" target="_blank">08-objects.html</a></p>
+                    <p><a href="/my-work/08-rock-paper-scissors.html" target="_blank">08-rock-paper-scissors.html</a>
+                    </p>
+                </div>
                 <div class="goal-item-body">
                     <h4>in this lesson</h4>
+
                     <ol>
                         <li>Objects = group related values together</li>
                         <li><a href="https://youtu.be/EerdGm-ehJQ?t=17297" target="_blank">Built-in objects (JSON,
@@ -162,10 +167,59 @@
                                                 <li><strong>Built-in JSON Object</strong></li>
                                                 <li><code><a href="/my-work/08-objects.html" target="_blank">JSON.stringify()</a></code>
                                                 </li>
-                                                <li></li>
-                                                <li></li>
+                                                <li>Resetting <code>localStorage.removeItem('score');</code></li>
+                                                <li>When something doesn't exist in LocalStorage, it will give us a
+                                                    <strong>=> null</strong>
+                                                </li>
+                                                <table>
+                                                    <thead>
+                                                        <tr>
+                                                            <th colspan="2">Score = null</th>
+                                                        </tr>
+
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>!score</td>
+                                                            <td>=> true</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>score === null</td>
+                                                            <td>=> true</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td colspan="2"><strong>score = {wins: 0,
+                                                                    losses:..}</strong></td>
+                                                        </tr>
+                                                    </tbody>
+                                                    </thead>
+                                                </table>
+                                                <li>Default Operator ||</li>
+                                                <li><code>const score = JSON.parse(localStorage.getItem('score')) || {win: 0, loss: 0, tie: 0,};</code>
+                                                </li>
+                                                <li><a href="assets/img/8/nullvsundefined-1.png" target="_blank">null =
+                                                        intentionally want something to be empty<< /a>
+                                                </li>
+                                                <li><strong>Auto-Boxing feature:</strong> strings can have
+                                                    properties<code>console.log('hello'.length);</code> |
+                                                    <code>console.log('hello'.toUpperCase());</code> can also be used
+                                                    with numbers and booliens
+                                                    <ul>
+                                                        <li>Auto-Boxing doesn't work with <strong>null or
+                                                                undefined</strong></li>
+                                                    </ul>
+                                                </li>
+                                                <li><strong>Objects are references</strong> <a
+                                                        href="/my-work/assets/img/8/references.png"
+                                                        target="_blank">Cannot compare references.</a></li>
+                                                <li>You are comparing the references, not the value inside
+                                                    <code>const object2 = object1;</code>
+                                                </li>
                                             </ol>
                                         </li>
+                                        <li><a href="https://youtu.be/EerdGm-ehJQ?t=19217" target="_blank">Object
+                                                Shortcuts</a></li>
+                                        <li>Reference</li>
+                                        <li>destructure shortcut</li>
                                     </ul>
                                 </li>
                                 <li><strong>localStorage</strong>
@@ -179,7 +233,11 @@
                         <li>Shortcuts (destructuring, shorthand property, shorthand method)</li>
                         <li>The <code>toUpperCase()</code> method of String values returns this string converted to
                             uppercase.</li>
+                        <li><strong>Shorthand Property: </strong></li>
+                        <li><a href="https://youtu.be/EerdGm-ehJQ?t=19380" target="_blank">Shorthand method syntax</a></li>
                     </ol>
+                    <!-- images -->
+
                 </div>
 
                 <div class="goal-item-video">
@@ -193,7 +251,7 @@
                         <a href="https://youtu.be/EerdGm-ehJQ?t=18041" target="_blank">Review Section</a>
                     </div>
                     <div class="video-element">
-                        <a href="https://youtu.be/EerdGm-ehJQ?t=19488" target="_blank">In this Lesson</a>
+                        <a href="https://youtu.be/EerdGm-ehJQ?t=19491" target="_blank">In this Lesson</a>
                     </div>
                     <div class="video-element">
                         <a href="https://youtu.be/EerdGm-ehJQ?t=19524" target="_blank">Exercises</a>
@@ -242,4 +300,5 @@
     </script>
 
 </body>
+
 </html>

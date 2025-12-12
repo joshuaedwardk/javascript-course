@@ -11,39 +11,7 @@
 <body>
   <div class="container">
     <h1 class="title">Rock Paper Scissors</h1>
-    <h2 class="title">Algorithm (Rock Paper Scissors)</h2>
-
-    <div class="goal">
-      <div class="goals">
-       <h3>When Clicking the button:</h3>
-        <ol>
-          <li>Computer randomly selects a move</li>
-          <li class="note">compare the move to get the result</li>
-          <li>update a score</li>
-          <li>display the results in a pop up</li>
-        </ol>
-      </div>
-
-      <div class="goals">
-        <h3>localStorage</h3>
-        <p>localStorage: it only stores strings</p>
-      </div>
-    </div>
-
-    <div class="video">
-      <div class="start">
-        <a href="https://youtu.be/EerdGm-ehJQ?t=15195" target="_blank">Start</a>
-      </div>
-      <div class="current">
-        <a href="https://youtu.be/EerdGm-ehJQ?t=18255" target="_blank">Current</a>
-      </div>
-      <div class="review">
-        <a href="https://youtu.be/EerdGm-ehJQ?t=18041" target="_blank">Review Section</a>
-      </div>
-      <div class="end"><a href="" target="_blank">Project Links</a></div>
-    </div>
-
-
+    <h2 class="title">Algorithm (Rock Paper Scissors)</h2> 
 
     <div class="game">
       <!-- rock -->
@@ -60,7 +28,7 @@
       <button onclick="
       playGame('scissors');
     ">Scissors</button>
-    
+
 
       <button onclick="
     score.win = 0;
@@ -75,22 +43,34 @@
 </body>
 
 <script>
-  const score = JSON.parse(localStorage.getItem('score'));
-/* replacing below code with: const score = JSON.parse(localStorage.getItem('score'));    
-const score = {
-    win: 0,
-    loss: 0,
-    tie: 0,
-    }
-    */  
 
-  if (score === null) {
-      score = {
-        win: 0,
-        loss: 0,
-        tie: 0,
+
+  /* Default Operator || see info: https://youtu.be/EerdGm-ehJQ?t=18443*/
+  const score = JSON.parse(localStorage.getItem('score')) || {win: 0, loss: 0, tie: 0,};
+
+  /* replacing below code with: const score = JSON.parse(localStorage.getItem('score'));    
+  const score = {
+      win: 0,
+      loss: 0,
+      tie: 0,
       }
-  }
+      */
+
+  /*if (score === null) {*/
+    /*Simplify this using Falsy values*/
+  /*if (!score){
+
+    score = {
+      win: 0,
+      loss: 0,
+      tie: 0,
+    };
+  }*/
+  
+
+  /*Simplify this using Falsy values*/
+
+  if (!score){}
 
 
 
