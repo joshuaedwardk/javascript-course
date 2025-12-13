@@ -19,8 +19,6 @@
     /*gradiant*/
     /* background-image: var(--gradiant); */
     --gradiant: linear-gradient(to right bottom, #051937, #004d7a, #008793, #00bf72, #a8eb12);
-
-
     /*fonts*/
     --h1: clamp(2.25rem, 2.05rem + 3vw, 2.5rem);
     --h2: clamp(2rem, 1.8rem + 3vw, 2.25rem);
@@ -113,10 +111,16 @@
 
   .goal-chapter .goal-item-video .video-element:hover {
     background-color: var(--thirdLight);
+    -webkit-box-shadow: 0 0 0 .0625em #820012;
+    box-shadow: 0 0 0 .0625em #820012
+    
   }
+
+  
 
   .video-element a {
     color: var(--backgroundSecondary);
+    
   }
 
   .game {
