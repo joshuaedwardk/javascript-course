@@ -13,9 +13,20 @@
     --bodyTextColor: #4e4b66;
     --bodyTextColorWhite: #fafbfc;
     --bodyNoteCode: #ffff74;
+
+    --bg-color: #ffffff;
+    --text-color: #333;
+    --header-bg: #f2ffef;
+    --border-color: #ddd;
+    --code-bg: #282c34;
+    --code-text: #abb2bf;
     /* color-bg */
     --backgroundPrimary: #fff;
     --backgroundSecondary: #efefef;
+    --primary-color: #11121a;
+    --hover-color: #272832;
+    --accent-color: #0071ff;
+    --text-color: #c9c9c9;
     /*gradiant*/
     /* background-image: var(--gradiant); */
     --gradiant: linear-gradient(to right bottom, #051937, #004d7a, #008793, #00bf72, #a8eb12);
@@ -59,8 +70,8 @@
     padding: 0;
   }
 
-  section{
-    padding: var(--sectionPadding); 
+  section {
+    padding: var(--sectionPadding);
   }
 
   .container {
@@ -119,9 +130,6 @@
     box-shadow: 0 0 0 .0625em #820012
   }
 
-  .js-total-cost {
-    
-  }
 
 
   .video-element a {
@@ -226,9 +234,20 @@
   li code {
     border-radius: var(--radius-normal);
     padding: .125em .25em;
-    background-color: var(--bodyNoteCode);
+    color: #61afef;
+    background-color: var(--code-bg);
+    font-size: var(--bodyFontSmall);
+
+  }
+
+  .code {
+    font-family: "Consolas", "Monaco", monospace;
+    background-color: var(--code-bg);
+    color: #61afef;
+    padding: .125em .25em;
     font-size: var(--bodyFontSmall);
   }
+
   /* Buttons */
   button {
     padding: 1em;
@@ -253,52 +272,41 @@
   }
 
   .btn {
-  width: 180px;
-  height: 60px;
-  cursor: pointer;
-  background: transparent;
-  border: 1px solid #91C9FF;
-  outline: none;
-  transition: 1s ease-in-out;
-}
+    width: 180px;
+    height: 60px;
+    cursor: pointer;
+    background: transparent;
+    border: 1px solid #91C9FF;
+    outline: none;
+    transition: 1s ease-in-out;
+  }
 
-svg {
-  position: absolute;
-  left: 0;
-  top: 0;
-  fill: none;
-  stroke: #fff;
-  stroke-dasharray: 150 480;
-  stroke-dashoffset: 150;
-  transition: 1s ease-in-out;
-}
+  .btn:hover {
+    transition: 1s ease-in-out;
+    background: #4F95DA;
+  }
 
-.btn:hover {
-  transition: 1s ease-in-out;
-  background: #4F95DA;
-}
+  .btn:hover svg {
+    stroke-dashoffset: -480;
+  }
 
-.btn:hover svg {
-  stroke-dashoffset: -480;
-}
-
-.btn span {
-  color: white;
-  font-size: 18px;
-  font-weight: 100;
-}
+  .btn span {
+    color: white;
+    font-size: 18px;
+    font-weight: 100;
+  }
 
 
   input {
     width: 50%;
     font-size: var(--bodyFontSize);
     line-height: 1.5em;
-    padding: 1em;   
+    padding: 1em;
     box-sizing: border-box;
-      border-radius: 0.5em;
+    border-radius: 0.5em;
     background-color: var(--backgroundPrimary);
     border: 5px solid var(--secondaryLight);
-}
+  }
 
   .skip {
     z-index: -1111111;
@@ -309,127 +317,145 @@ svg {
   }
 
   /* Navigation */
-  .nav {
-    position: -webkit-sticky;
-    /* Safari */
-    position: sticky;
-    box-shadow: 3px 3px;
+  nav {
+    background-color: var(--primary-color);
+    border-bottom: 1px solid var(--hover-color);
   }
 
-  .nav-grid-container {
-    display: grid;
-    gap: 1em;
-    grid-template-columns: 1fr 3fr;
-    align-items: center;
-    overflow: hidden;
-    background-color: var(--backgroundSecondary);
-  }
-
-  .nav-grid-image {
-    background-color: var(--backgroundSecondary);
-    padding: 1em;
-  }
-
-  .nav-grid-body {
-    display: grid;
-    grid-template-columns: repeat(6, auto);
-  }
-
-  #nav-expanded {
-    padding: 0;
+  nav ul {
     list-style: none;
-
+    display: flex;
   }
 
-  .nav-item {
-    background-color: #00bf72;
+  nav .home-li {
+    margin-right: auto;
+  }
+
+  nav li {
+    display: flex;
+  }
+
+  nav a {
+    display: flex;
+    text-decoration: none;
+    color: var(--text-color);
+    padding: 1em 2em;
+    transition: background-color 150ms ease;
+  }
+
+  nav a:hover {
+    background-color: var(--hover-color);
+  }
+
+  nav a.active-link {
+    border-bottom: 2px solid var(--text-color);
+  }
+
+  nav a.accent-link {
+    background-color: var(--accent-color);
+  }
+
+  #open-sidebar-button {
+    display: none;
+    background: none;
+    border: none;
     padding: 1em;
-    border: 1px solid #001f3f;
+    margin-left: auto;
+    cursor: pointer;
+  }
+
+  #close-sidebar-button {
+    display: none;
+    background: none;
+    border: none;
+    padding: 1em;
+    cursor: pointer;
+  }
+
+  #overlay {
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    inset: 0;
+    z-index: 9;
+    display: none;
+  }
+
+  .skip-link {
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 1000;
+    background-color: var(--accent-color);
+    color: #ffffff;
+    padding: 12px 24px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: opacity 0.3s ease;
+  }
+
+  .skip-link:focus {
+    opacity: 1;
+    pointer-events: auto;
+    outline: 3px solid #ffffff;
   }
 
   /* images */
-/* Style the Image Used to Trigger the Modal */
-#myImg {
-	border-radius: 5px;
-	cursor: pointer;
-	transition: 0.3s;
-}
+  /* Style the Image Used to Trigger the Modal */
 
-#myImg:hover {
-	opacity: 0.7;
-}
 
-/* The Modal (background) */
-.modal {
-	display: none; /* Hidden by default */
-	position: fixed; /* Stay in place */
-	z-index: 1; /* Sit on top */
-	padding-top: 100px; /* Location of the box */
-	left: 0;
-	top: 0;
-	width: 100%; /* Full width */
-	height: 100%; /* Full height */
-	overflow: auto; /* Enable scroll if needed */
+  @keyframes zoom {
+    from {
+      transform: scale(0);
+    }
 
-	background-color: rgba(0, 0, 0, 0.9); /* Black w/ opacity */
-}
+    to {
+      transform: scale(1);
+    }
+  }
 
-/* Modal Content (Image) */
-.modal-content {
-	margin: auto;
-	display: block;
-	width: 80%;
-	max-width: 700px;
-}
 
-/* Caption of Modal Image (Image Text) - Same Width as the Image */
-#caption {
-	margin: auto;
-	display: block;
-	width: 80%;
-	max-width: 700px;
-	text-align: center;
-	color: #ccc;
-	padding: 10px 0;
-	height: 150px;
-}
 
-/* Add Animation - Zoom in the Modal */
-.modal-content,
-#caption {
-	animation-name: zoom;
-	animation-duration: 0.6s;
-}
+  /* 100% Image Width on Smaller Screens */
 
-@keyframes zoom {
-	from {
-		transform: scale(0);
-	}
-	to {
-		transform: scale(1);
-	}
-}
+  /* grid container */
+  .grid-container {
+    display: grid;
+    gap: 1px;
+    background-color: var(--border-color);
+    border: 1px solid var(--border-color);
+    margin: 20px 0;
+    border-radius: 4px;
+    overflow: hidden;
+  }
 
-/* The Close Button */
-.close {
-	position: absolute;
-	top: 15px;
-	right: 35px;
-	color: #f1f1f1;
-	font-size: 40px;
-	font-weight: bold;
-	transition: 0.3s;
-}
+  .grid-header {
+    background-color: var(--header-bg);
+    font-weight: bold;
+    padding: 12px;
+  }
 
-.close:hover,
-.close:focus {
-	color: #bbb;
-	text-decoration: none;
-	cursor: pointer;
-}
+  .grid-item {
+    background-color: #fff;
+    padding: 12px;
+    align-items: center;
+  }
 
-/* 100% Image Width on Smaller Screens */
+  /* Responsive Grids */
+  .terms-grid {
+    grid-template-columns: 200px 1fr;
+  }
 
+  .command-steps-grid {
+    grid-template-columns: 150px 1fr 1.5fr;
+  }
+
+  .command-only-grid {
+    grid-template-columns: 1fr 2fr;
+  }
 
 
   /* fonts */
@@ -463,9 +489,65 @@ svg {
 /* --- Media Query: min-width: 64rem (Desktop) --- */
 /* --- Media Query: max-width: 86.5rem (Mobile Navigation Breakpoint) --- */
 @media only screen and (max-width: 86.5rem) {
-	.modal-content {
-		width: 100%;
-	}
+  .modal-content {
+    width: 100%;
+  }
+
+  .terms-grid,
+  .command-steps-grid,
+  .command-only-grid {
+    grid-template-columns: 1fr;
+    /* Stack on small screens */
+  }
+
+  .grid-header {
+    display: none;
+  }
+
+  #open-sidebar-button,
+  #close-sidebar-button {
+    display: block;
+  }
+
+  nav {    
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100vh;
+    width: min(15em, 100%);
+    z-index: 10;
+    border-left: 1px solid var(--hover-color);
+    transition: right 300ms ease-in-out;
+  }
+
+  nav.show {
+    right: 0;
+  }
+
+  nav.show~#overlay {
+    display: block;
+  }
+
+  nav ul {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  nav a {
+    width: 100%;
+    padding-left: 2.5em;
+  }
+
+  nav a.active-link {
+    border-bottom: none;
+  }
+
+  nav .home-li {
+    margin-right: unset;
+  }
+
+  /* Hide headers on mobile for cleaner look */
 }
+
 /* --- Media Query: 40.625rem <= min-width < 64rem (Tablet) --- */
 /* --- Media Query: min-width: 86.563rem (Desktop Navigation) --- */

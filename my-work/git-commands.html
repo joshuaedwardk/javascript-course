@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Git Commands</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <div id="open-sidebar-button" onclick="openSidebar()" aria-label="open sidebar" aria-expanded="false"
+        aria-controls="navbar">
+        <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#c9c9c9">
+            <path
+                d="M165.13-254.62q-10.68 0-17.9-7.26-7.23-7.26-7.23-18t7.23-17.86q7.22-7.13 17.9-7.13h629.74q10.68 0 17.9 7.26 7.23 7.26 7.23 18t-7.23 17.87q-7.22 7.12-17.9 7.12H165.13Zm0-200.25q-10.68 0-17.9-7.27-7.23-7.26-7.23-17.99 0-10.74 7.23-17.87 7.22-7.13 17.9-7.13h629.74q10.68 0 17.9 7.27 7.23 7.26 7.23 17.99 0 10.74-7.23 17.87-7.22 7.13-17.9 7.13H165.13Zm0-200.26q-10.68 0-17.9-7.26-7.23-7.26-7.23-18t7.23-17.87q7.22-7.12 17.9-7.12h629.74q10.68 0 17.9 7.26 7.23 7.26 7.23 18t-7.23 17.86q-7.22 7.13-17.9 7.13H165.13Z" />
+        </svg>
+    </div>
+    <nav id="navbar">
+        <ul>
+            <li>
+                <button id="close-sidebar-button" onclick="closeSidebar()" aria-label="close sidebar">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px"
+                        fill="#c9c9c9">
+                        <path
+                            d="m480-444.62-209.69 209.7q-7.23 7.23-17.5 7.42-10.27.19-17.89-7.42-7.61-7.62-7.61-17.7 0-10.07 7.61-17.69L444.62-480l-209.7-209.69q-7.23-7.23-7.42-17.5-.19-10.27 7.42-17.89 7.62-7.61 17.7-7.61 10.07 0 17.69 7.61L480-515.38l209.69-209.7q7.23-7.23 17.5-7.42 10.27-.19 17.89 7.42 7.61 7.62 7.61 17.7 0 10.07-7.61 17.69L515.38-480l209.7 209.69q7.23 7.23 7.42 17.5.19 10.27-7.42 17.89-7.62 7.61-17.7 7.61-10.07 0-17.69-7.61L480-444.62Z" />
+                    </svg>
+                </button>
+            </li>
+            <li class="home-li"><a class="active-link" aria-current="page" href="/my-work/projects.html">Home</a></li>
+            <li><a href="/my-work/projects.html#chapter4">4</a></li>
+            <li><a href="/my-work/projects.html#chapter5">5</a></li>
+            <li><a href="/my-work/projects.html#chapter6">6</a></li>
+            <li><a href="/my-work/projects.html#chapter7">7</a></li>
+            <li><a href="/my-work/projects.html#chapter8">8</a></li>
+            <li><a href="/my-work/projects.html#chapter9">9</a></li>
+            <li><a href="/my-work/git-commands.html">Git Commands</a></li>
+        </ul>
+    </nav>
+    <div id="overlay" onclick="closeSidebar()" aria-hidden="true"></div>
+
+    <!-- Navbar: https://www.coding2go.com/animated-navbar/-->
+    <section id="main">
+        <div class="container">
+
+        <h1>📜 Git Terminal Commands: A Novice's Guide</h1>
+        <p>A structured, grid-based reference for Git workflows across Linux, Windows, and macOS.</p>
+
+        <h2>📚 Essential Git Terms</h2>
+
+        <div class="grid-container terms-grid">
+            <div class="grid-header">Term</div>
+            <div class="grid-header">Definition</div>
+
+            <div class="grid-item"><strong>Repository</strong></div>
+            <div class="grid-item">Your project's folder where Git tracks changes.</div>
+
+            <div class="grid-item"><strong>Remote (origin)</strong></div>
+            <div class="grid-item">The central copy hosted online (e.g., GitHub).</div>
+
+            <div class="grid-item"><strong>Commit</strong></div>
+            <div class="grid-item">A "snapshot" of your files recorded in history.</div>
+        </div>
+
+        <h2>🚀 Step 1: Getting Started</h2>
+        <div class="grid-container command-steps-grid">
+            <div class="grid-header">Scenario</div>
+            <div class="grid-header">Command</div>
+            <div class="grid-header">Description</div>
+
+            <div class="grid-item">New Local</div>
+            <div class="grid-item"><span class="code">git init</span></div>
+            <div class="grid-item">Initialize a new repo in current folder.</div>
+
+            <div class="grid-item">Existing</div>
+            <div class="grid-item"><span class="code">git clone [URL]</span></div>
+            <div class="grid-item">Download a project from GitHub.</div>
+        </div>
+
+        <h2>🛠️ Step 2: Save & Sync (The Daily Loop)</h2>
+
+        <div class="grid-container command-steps-grid">
+            <div class="grid-header">Order</div>
+            <div class="grid-header">Command</div>
+            <div class="grid-header">Description</div>
+
+            <div class="grid-item">1. Check</div>
+            <div class="grid-item"><span class="code">git status</span></div>
+            <div class="grid-item">See what has changed.</div>
+
+            <div class="grid-item">2. Stage</div>
+            <div class="grid-item"><span class="code">git add .</span></div>
+            <div class="grid-item">Prepare ALL changes for saving.</div>
+
+            <div class="grid-item">3. Commit</div>
+            <div class="grid-item"><span class="code">git commit -m "msg"</span></div>
+            <div class="grid-item">Save changes locally with a message.</div>
+
+            <div class="grid-item">4. Pull</div>
+            <div class="grid-item"><span class="code">git pull origin main</span></div>
+            <div class="grid-item">Download others' work before you push.</div>
+
+            <div class="grid-item">5. Push</div>
+            <div class="grid-item"><span class="code">git push origin main</span></div>
+            <div class="grid-item">Upload your work to GitHub.</div>
+        </div>
+
+        <h2>🌳 Branching & 🍴 Forking</h2>
+        <div class="grid-container command-only-grid">
+            <div class="grid-header">Action</div>
+            <div class="grid-header">Command / Instruction</div>
+
+            <div class="grid-item">Create Branch</div>
+            <div class="grid-item"><span class="code">git checkout -b [name]</span></div>
+            <div class="grid-item">Switch Branch</div>
+            <div class="grid-item"><span class="code">git checkout [name]</span></div>
+            <div class="grid-item">Fork Project</div>
+            <div class="grid-item">Click <strong>Fork</strong> on GitHub UI, then clone your version.</div>
+            <div class="grid-item">PR (Pull Request)</div>
+            <div class="grid-item">On GitHub, click <strong>"New Pull Request"</strong> to merge Fork into Main.</div>
+        </div>
+
+        <h2>🆘 The "Emergency" Section</h2>
+        <div class="grid-container command-steps-grid">
+            <div class="grid-header">Goal</div>
+            <div class="grid-header">Command</div>
+            <div class="grid-header">Result</div>
+
+            <div class="grid-item">Start Over</div>
+            <div class="grid-item"><span class="code">git reset --hard origin/main</span></div>
+            <div class="grid-item">Wipes all local changes to match GitHub exactly.</div>
+
+            <div class="grid-item">Clean Junk</div>
+            <div class="grid-item"><span class="code">git clean -fd</span></div>
+            <div class="grid-item">Deletes untracked files and folders.</div>
+        </div>
+
+        <div class="grid-container command-steps-grid">
+            <div class="grid-header">Goal</div>
+            <div class="grid-header">Command</div>
+            <div class="grid-header">Description</div>
+
+            <div class="grid-item">Push to Remote</div>
+            <div class="grid-item"><span class="code">git push -u origin [branch-name]</span></div>
+            <div class="grid-item">Uploads your new branch to GitHub and links it (the <span class="code">-u</span> sets
+                it up for future pushes).</div>
+
+            <div class="grid-item">Merge to Main</div>
+            <div class="grid-item"><span class="code">git merge [branch-name]</span></div>
+            <div class="grid-item">Run this while on main to pull changes from your feature branch into it.</div>
+
+            <div class="grid-item">Nuke Local</div>
+            <div class="grid-item"><span class="code">git branch -D [branch-name]</span></div>
+            <div class="grid-item">Force Delete: Deletes the branch on your computer even if it hasn't been merged.
+            </div>
+
+            <div class="grid-item">Nuke Remote</div>
+            <div class="grid-item"><span class="code">git push origin --delete [branch-name]</span></div>
+            <div class="grid-item">Deletes the branch on GitHub permanently.</div>
+        </div>
+        </div>
+        
+    </section>
+
+    <footer>
+        <section class="footer-section">
+            <div class="container">
+                <p>Footer</p>
+            </div>
+        </section>
+
+    </footer>
+
+    <script>
+    </script>
+
+</body>
+<script src="/my-work/assets/js/img-modal.js"></script>
+<script src="/my-work/assets/js/nav.js"></script>
+
+</html>

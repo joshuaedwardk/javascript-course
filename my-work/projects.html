@@ -1,46 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Listng all Projects</title>
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <header>
-        <nav>
-            <div class="nav-grid-container">
-                <div class="nav-grid-image">
-                    <img src="assets/img/Mess with the glock-Clean.png" height="40px" alt="">
-                </div>
-                <ul class="nav-grid-body" id="nav-expanded">
-                    <li class="nav-item"><a href="#chapter4">4</a></li>
-                    <li class="nav-item"><a href="#chapter5">5</a></li>
-                    <li class="nav-item"><a href="#chapter6">6</a></li>
-                    <li class="nav-item"><a href="#chapter7">7</a></li>
-                    <li class="nav-item"><a href="#chapter8">8</a></li>
-                    <li class="nav-item"><a href="#chapter9">9</a></li>
-                </ul>
-            </div>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <div id="open-sidebar-button" onclick="openSidebar()" aria-label="open sidebar" aria-expanded="false"
+        aria-controls="navbar">
+        <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#c9c9c9">
+            <path
+                d="M165.13-254.62q-10.68 0-17.9-7.26-7.23-7.26-7.23-18t7.23-17.86q7.22-7.13 17.9-7.13h629.74q10.68 0 17.9 7.26 7.23 7.26 7.23 18t-7.23 17.87q-7.22 7.12-17.9 7.12H165.13Zm0-200.25q-10.68 0-17.9-7.27-7.23-7.26-7.23-17.99 0-10.74 7.23-17.87 7.22-7.13 17.9-7.13h629.74q10.68 0 17.9 7.27 7.23 7.26 7.23 17.99 0 10.74-7.23 17.87-7.22 7.13-17.9 7.13H165.13Zm0-200.26q-10.68 0-17.9-7.26-7.23-7.26-7.23-18t7.23-17.87q7.22-7.12 17.9-7.12h629.74q10.68 0 17.9 7.26 7.23 7.26 7.23 18t-7.23 17.86q-7.22 7.13-17.9 7.13H165.13Z" />
+        </svg>
+    </div>
+    <nav id="navbar">
+        <ul>
+            <li>
+                <button id="close-sidebar-button" onclick="closeSidebar()" aria-label="close sidebar">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px"
+                        fill="#c9c9c9">
+                        <path
+                            d="m480-444.62-209.69 209.7q-7.23 7.23-17.5 7.42-10.27.19-17.89-7.42-7.61-7.62-7.61-17.7 0-10.07 7.61-17.69L444.62-480l-209.7-209.69q-7.23-7.23-7.42-17.5-.19-10.27 7.42-17.89 7.62-7.61 17.7-7.61 10.07 0 17.69 7.61L480-515.38l209.69-209.7q7.23-7.23 17.5-7.42 10.27-.19 17.89 7.42 7.61 7.62 7.61 17.7 0 10.07-7.61 17.69L515.38-480l209.7 209.69q7.23 7.23 7.42 17.5.19 10.27-7.42 17.89-7.62 7.61-17.7 7.61-10.07 0-17.69-7.61L480-444.62Z" />
+                    </svg>
+                </button>
+            </li>
+            <li class="home-li"><a class="active-link" aria-current="page" href="/my-work/projects.html">Home</a></li>
+            <li><a href="/my-work/projects.html#chapter4">4</a></li>
+            <li><a href="/my-work/projects.html#chapter5">5</a></li>
+            <li><a href="/my-work/projects.html#chapter6">6</a></li>
+            <li><a href="/my-work/projects.html#chapter7">7</a></li>
+            <li><a href="/my-work/projects.html#chapter8">8</a></li>
+            <li><a href="/my-work/projects.html#chapter9">9</a></li>
+            <li><a href="/my-work/git-commands.html">Git Commands</a></li>
+        </ul>
+    </nav>
+    <div id="overlay" onclick="closeSidebar()" aria-hidden="true"></div>
 
-            <!-- <div class="nav-grid-container">
-            <div class="nav-grid-image">
-                <img src="assets/img/Mess with the glock-Clean.png" height="40px" alt="">
-            </div>
-            <ul class="nav-grid-body" id="nav-expanded">
-                <li class="nav-item"><a href="#chapter4">4</a></li>
-                <li class="nav-item"><a href="#chapter5">5</a></li>
-                <li class="nav-item"><a href="#chapter6">6</a></li>
-                <li class="nav-item"><a href="#chapter7">7</a></li>
-                <li class="nav-item"><a href="#chapter8">8</a></li>
-                <li class="nav-item"><a href="#chapter9">9</a></li>
-            </ul>
-        </div> -->
-        </nav>
-    </header>
+    <!-- Navbar: https://www.coding2go.com/animated-navbar/-->
+
     <section id="main">
         <div class="container">
             <div class="goal-container">
@@ -322,39 +321,54 @@
                                     <li>Youtube Project: <a href="https://youtu.be/EerdGm-ehJQ?t=21204" target="_blank"
                                             rel="noopener noreferrer">Steps</a>
                                         <ul>
-                                            <li><img id="previewImg" src="/my-work/assets/img/9/dom-youtube-1.png" alt="Project 1 Dom" style="width:100%;max-width:300px">
+                                            <li><img id="previewImg" src="/my-work/assets/img/9/dom-youtube-1.png"
+                                                    alt="Project 1 Dom" style="width:100%;max-width:300px">
                                             </li>
                                         </ul>
 
                                     </li>
-                                    <li>Rock Paper Scissors Project: <a href="https://youtu.be/EerdGm-ehJQ?t=21773" target="_blank" rel="noopener noreferrer">Steps</a></li>
-                                    <li>Amazon Shipping Calculator:  <a href="https://youtu.be/EerdGm-ehJQ?t=22486" target="_blank" rel="noopener noreferrer">Steps</a>
+                                    <li>Rock Paper Scissors Project: <a href="https://youtu.be/EerdGm-ehJQ?t=21773"
+                                            target="_blank" rel="noopener noreferrer">Steps</a></li>
+                                    <li>Amazon Shipping Calculator: <a href="https://youtu.be/EerdGm-ehJQ?t=22486"
+                                            target="_blank" rel="noopener noreferrer">Steps</a>
                                         <ul>
-                                            <li><img id="previewImg" src="/my-work/assets/img/9/dom-amazon-steps-1.png" alt="Project 3 Amazon Shipping Calculator" style="width:100%;max-width:300px"></li>
-                                            <li><a href="https://youtu.be/EerdGm-ehJQ?t=22791" target="_blank" rel="noopener noreferrer">input variable doesn't use innerHTML but value</a></li>
-                                            <li><a href="https://youtu.be/EerdGm-ehJQ?t=23111" target="_blank" rel="noopener noreferrer">Type Coercion: whenever we get a value from the DOM, the value will be a string.  Javascript has a solution <code>Number(inputElement.value)</code></a></li>
-                                            <li><img id="previewImg" src="/my-work/assets/img/9/dom-project-3-Amazon-1.png" alt="Project 3 Amazon Shipping Calculator" style="width:100%;max-width:300px"></li>
-                                            <li><a href="https://youtu.be/EerdGm-ehJQ?t=23287 target="_blank" rel="noopener noreferrer">clicks, keydowns => events | onclick, onkeydown =>event listeners</a>
-                                            <ul>
-                                                <li><a href="https://www.youtube.com/watch?v=EerdGm-ehJQ&t=22486s target="_blank" rel="noopener noreferrer"><strong>Event Listeners</strong></a></li>
-                                                <li>onclick = click</li>
-                                                <li>onkeydown = key press</li>
-                                                <li>onscroll = scrolling</li>
-                                                <li>onmouseenter = hovering over</li>
-                                                <li>onmouseleave = stop hovering</li>
-                                                <li>many more</li>
-                                            </ul>
+                                            <li><img id="previewImg" src="/my-work/assets/img/9/dom-amazon-steps-1.png"
+                                                    alt="Project 3 Amazon Shipping Calculator"
+                                                    style="width:100%;max-width:300px"></li>
+                                            <li><a href="https://youtu.be/EerdGm-ehJQ?t=22791" target="_blank"
+                                                    rel="noopener noreferrer">input variable doesn't use innerHTML but
+                                                    value</a></li>
+                                            <li><a href="https://youtu.be/EerdGm-ehJQ?t=23111" target="_blank"
+                                                    rel="noopener noreferrer">Type Coercion: whenever we get a value
+                                                    from the DOM, the value will be a string. Javascript has a solution
+                                                    <code>Number(inputElement.value)</code></a></li>
+                                            <li><img id="previewImg"
+                                                    src="/my-work/assets/img/9/dom-project-3-Amazon-1.png"
+                                                    alt="Project 3 Amazon Shipping Calculator"
+                                                    style="width:100%;max-width:300px"></li>
+                                            <li><a href="https://youtu.be/EerdGm-ehJQ?t=23287 target=" _blank"
+                                                    rel="noopener noreferrer">clicks, keydowns => events | onclick,
+                                                    onkeydown =>event listeners</a>
+                                                <ul>
+                                                    <li><a href="https://www.youtube.com/watch?v=EerdGm-ehJQ&t=22486s target="
+                                                            _blank" rel="noopener noreferrer"><strong>Event
+                                                                Listeners</strong></a></li>
+                                                    <li>onclick = click</li>
+                                                    <li>onkeydown = key press</li>
+                                                    <li>onscroll = scrolling</li>
+                                                    <li>onmouseenter = hovering over</li>
+                                                    <li>onmouseleave = stop hovering</li>
+                                                    <li>many more</li>
+                                                </ul>
                                             </li>
-                                            <li><a href="https://youtu.be/EerdGm-ehJQ?t=23585" target="_blank" rel="noopener noreferrer">Number to a STRING</a></li>
+                                            <li><a href="https://youtu.be/EerdGm-ehJQ?t=23585" target="_blank"
+                                                    rel="noopener noreferrer">Number to a STRING</a></li>
                                         </ul>
-                                    
+
                                     </li>
                                 </ul>
                             </li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                        </ol>
+                         </ol>
                     </div>
 
                     <div class="goal-item-video">
@@ -389,15 +403,15 @@
                 <div id="caption"></div>
             </div>
         </div>
-   </section>
+    </section>
 
     <footer>
-       <section class="footer-section">
-         <div class="container">
-            <p>Footer</p>
-        </div>
-       </section>
-        
+        <section class="footer-section">
+            <div class="container">
+                <p>Footer</p>
+            </div>
+        </section>
+
     </footer>
 
     <script>
@@ -405,5 +419,5 @@
 
 </body>
 <script src="/my-work/assets/js/img-modal.js"></script>
-
+<script src="/my-work/assets/js/nav.js"></script>
 </html>
