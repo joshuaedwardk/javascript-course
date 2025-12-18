@@ -3,21 +3,21 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Doms Projects</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Doms Projects</title>
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
-    <div class="container">
-        <h1 class="title">Chapter 9: Doms Projects</h1>
-        
-        <section id="youtube-section">
-            <div class="container">
-                <p>Youtube Subscribe Button</p>
-                <!-- Step 1 | create button, create on click, create class -->
-                 <button onclick="
+  <div class="container">
+    <h1 class="title">Chapter 9: Doms Projects</h1>
+
+    <section id="youtube-section">
+      <div class="container">
+        <p>Youtube Subscribe Button</p>
+        <!-- Step 1 | create button, create on click, create class -->
+        <button onclick="
                 /* Step 2 | console.log(document.querySelector('.youtubeButton'));*/
                 /* Step 3 | it works up to here now make variable using const buttonElement*/
                 /* Step 4 | add if / else statements */
@@ -34,38 +34,86 @@
                  subscribe();
                 /* Step 6 | Function - Cleaning Code function subscribe() */
                  " class="js-subscribe-button">Subscribe</button>
-                 
-              </div>  
-            </section>
 
-         <section class="amazon-section">
-          <div class="container">
-            <p>Amazon Shipping Calculator</p>
-            <input placeholder="Cost of order">
-            <button onclick="       
-            " class="btn-input">Calculate</button>
-          </div>
-         </section> 
+      </div>
+    </section>
+
+    <section class="amazon-section">
+      <div class="container">
+        <p>Amazon Shipping Calculator</p>
+        <input placeholder="Cost of order" class="js-cost-input" onkeydown="handleCostKeyDown(event);">
+
+        <button onclick="calculateTotal();">Calculate</button>
+
+        <div class="box">
+          <p class="js-total-cost">total</p>
+        </div>
+
+      </div>
+    </section>
 
 
-         <section class="button-section">
-          <div class="container">
-            
-          </div>
-         </section>
 
-    </div>
+
+  </div>
 </body>
 <script>
-    function subscribe() {
-    const buttonElement = document.querySelector('.js-subscribe-button');
-        if (buttonElement.innerText === 'Subscribe') {
-          buttonElement.innerText = 'Subscribed'
-        } else {
-          buttonElement.innerText = 'Subscribe'
-        }
+  /* STRING */
+  String(25)
+  /*Do not rely on String to do math | Look at console.log('25' + 5)*/
+  console.log('25' - 5);
+  console.log('25' + 5);
+
+
+  /* Object that repersents the BROWSER */
+  window.document
+  window.console.log('window');
+  window.alert
+   
+
+  /* function to onkeydown enter */
+  function handleCostKeyDown(event){
+    /*console.log(event.key);*/
+    if (event.key === 'Enter') {
+      calculateTotal()
+    } 
+  }
+
+  function clearFields() {
+    document.getElementById("clearField").value=""
+ }
+
+  /*console.log(inputElement.value);*/
+  /* const cost = inputElement.value; | Changed Value so we cange to let*/
+  function calculateTotal() {
+    const inputElement = document.querySelector('.js-cost-input');
+    let cost = Number(inputElement.value);
+    /*checking why addition is bad*/
+    /*console.log(cost)*/
+
+    if (cost < 40) {
+      cost = cost + 10;
+      /*checking why addition is bad | cost = cost + 10 = 2210 not 32*/
+      /*console.log(cost);*/
+      /*its a string not a value | Javascript has a solution Number(inputElement.value)*/
+      /*console.log(typeof cost);*/
+
     }
-    
+    // PUT THE TOTAL INSIDE THE PARAGRAPH, MAKE A CLASS THEN LINK TO IT
+    document.querySelector('.js-total-cost')
+      .innerHTML = `$${cost}`
+  }
+
+
+  function subscribe() {
+    const buttonElement = document.querySelector('.js-subscribe-button');
+    if (buttonElement.innerText === 'Subscribe') {
+      buttonElement.innerText = 'Subscribed'
+    } else {
+      buttonElement.innerText = 'Subscribe'
+    }
+  }
+
 </script>
 
 </html>
