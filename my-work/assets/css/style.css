@@ -27,7 +27,7 @@
     --h5: clamp(1.25rem, 1.05rem + 3vw, 1.5rem);
     --bodyFontSize: clamp(1rem, 0.8rem + 3vw, 1.25rem);
     --bodyFontSmall: clamp(0.75rem, 0.6rem + 3vw, 0.9rem);
-    --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+    --sectionPadding: clamp(2.75rem, 5.82vw, 5.25rem) 1rem;
     /*style*/
     --headerFont: "Oswald", Arial, sans-serif;
     --font-family-code: "JetBrains Mono", monospace;
@@ -61,7 +61,6 @@
 
   section{
     padding: var(--sectionPadding); 
-    margin: 2% 0 2% 0;
   }
 
   .container {
