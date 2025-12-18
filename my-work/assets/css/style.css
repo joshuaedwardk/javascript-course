@@ -5,7 +5,7 @@
     --primaryLight: #43b7ff;
     --secondary: #43b7ff;
     --secondaryLight: #001f3f;
-    --third: #990000;
+    --tertiary: #990000;
     --thirdLight: #99000060;
     --thirdLightOpp: #99000020;
     /* specific-colors */
@@ -37,26 +37,31 @@
     --radius-full: 9999px;
   }
 
+  /* Base HTML/Body Styles */
   body,
   html {
-    margin: 0;
-    overflow-x: hidden;
-    padding: 0;
-    font-family: var(--bodyFont);
-    font-size: var(--bodyFontSize);
     color: var(--bodyTextColor);
+    font-family: var(--bodyFont);
+    font-size: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
     scroll-behavior: smooth;
+    transition: background-color 0.3s;
   }
 
+  /* Universal Box-Sizing */
   *,
-  *:before,
-  *:after {
+  :after,
+  :before {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
   }
 
-  body {
-    min-height: 100vh;
-    transition: background-color 0.3s; 
+  section{
+    padding: var(--sectionPadding); 
+    margin: 5% 0 5% 0;
   }
 
   .container {
@@ -102,7 +107,7 @@
   }
 
   .goal-chapter .goal-item-video .video-element {
-    background-color: var(--third);
+    background-color: var(--tertiary);
     border: 1px solid var(--primary);
     color: var(--backgroundSecondary);
     min-height: 3em;
@@ -113,18 +118,24 @@
     background-color: var(--thirdLight);
     -webkit-box-shadow: 0 0 0 .0625em #820012;
     box-shadow: 0 0 0 .0625em #820012
-    
   }
 
-  
+
 
   .video-element a {
     color: var(--backgroundSecondary);
-    
   }
 
   .game {
     margin-top: 2em;
+  }
+
+  .box {
+    padding: 1em;
+    background-color: var(--backgroundSecondary);
+    margin-top: 1em;
+    margin-bottom: 1em;
+    border: 1px solid var(--primary);
   }
 
   h1,
@@ -189,7 +200,7 @@
     line-height: 1.1rem;
     text-wrap: pretty;
     font-size: var(--bodyFontSmall);
-    
+
   }
 
   ol a {
@@ -215,8 +226,8 @@
     padding: .125em .25em;
     background-color: var(--bodyNoteCode);
     font-size: var(--bodyFontSmall);
-   }
-
+  }
+  /* Buttons */
   button {
     padding: 1em;
     border-radius: 0.5em;
@@ -226,13 +237,66 @@
 
   button:hover {
     background-color: var(--backgroundPrimary);
-    font-family: var(--navNeon);
   }
 
   a:hover,
   button:hover {
     cursor: pointer;
   }
+
+  button .btn-input {
+    padding: .5em;
+    border-radius: 0.5em;
+    background-color: var(--tertiary);
+  }
+
+  .btn {
+  width: 180px;
+  height: 60px;
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid #91C9FF;
+  outline: none;
+  transition: 1s ease-in-out;
+}
+
+svg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  fill: none;
+  stroke: #fff;
+  stroke-dasharray: 150 480;
+  stroke-dashoffset: 150;
+  transition: 1s ease-in-out;
+}
+
+.btn:hover {
+  transition: 1s ease-in-out;
+  background: #4F95DA;
+}
+
+.btn:hover svg {
+  stroke-dashoffset: -480;
+}
+
+.btn span {
+  color: white;
+  font-size: 18px;
+  font-weight: 100;
+}
+
+
+  input {
+    width: 50%;
+    font-size: var(--bodyFontSize);
+    line-height: 1.5em;
+    padding: 1em;   
+    box-sizing: border-box;
+      border-radius: 0.5em;
+    background-color: var(--backgroundPrimary);
+    border: 5px solid var(--secondaryLight);
+}
 
   .skip {
     z-index: -1111111;
@@ -247,6 +311,7 @@
     position: -webkit-sticky;
     /* Safari */
     position: sticky;
+    box-shadow: 3px 3px;
   }
 
   .nav-grid-container {
@@ -259,8 +324,7 @@
   }
 
   .nav-grid-image {
-    background-color: #f5eb35;
-    border: 1px solid #001f3f;
+    background-color: var(--backgroundSecondary);
     padding: 1em;
   }
 
@@ -272,7 +336,7 @@
   #nav-expanded {
     padding: 0;
     list-style: none;
-  
+
   }
 
   .nav-item {
@@ -281,32 +345,125 @@
     border: 1px solid #001f3f;
   }
 
-/* images */
-
-
-/* fonts */
-@font-face {
-  font-style: normal;
-  font-family: "Oswald";
-  font-weight: 600;
-  font-display: swap;
-  src: url("../fonts/oswald-v53-latin-600.woff2") format("woff2");
+  /* images */
+/* Style the Image Used to Trigger the Modal */
+#myImg {
+	border-radius: 5px;
+	cursor: pointer;
+	transition: 0.3s;
 }
 
-@font-face {
-  font-style: normal;
-  font-family: "Yellowtail";
-  font-weight: 400;
-  font-display: swap;
-  src: url("../fonts/yellowtail-v22-latin-regular.woff2") format("woff2");
+#myImg:hover {
+	opacity: 0.7;
 }
 
-@font-face {
-  font-style: normal;
-  font-family: "Oswald";
-  font-weight: 400;
-  font-display: swap;
-  src: url("../fonts/oswald-v53-latin-regular.woff2") format("woff2");
+/* The Modal (background) */
+.modal {
+	display: none; /* Hidden by default */
+	position: fixed; /* Stay in place */
+	z-index: 1; /* Sit on top */
+	padding-top: 100px; /* Location of the box */
+	left: 0;
+	top: 0;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	overflow: auto; /* Enable scroll if needed */
+
+	background-color: rgba(0, 0, 0, 0.9); /* Black w/ opacity */
 }
 
+/* Modal Content (Image) */
+.modal-content {
+	margin: auto;
+	display: block;
+	width: 80%;
+	max-width: 700px;
 }
+
+/* Caption of Modal Image (Image Text) - Same Width as the Image */
+#caption {
+	margin: auto;
+	display: block;
+	width: 80%;
+	max-width: 700px;
+	text-align: center;
+	color: #ccc;
+	padding: 10px 0;
+	height: 150px;
+}
+
+/* Add Animation - Zoom in the Modal */
+.modal-content,
+#caption {
+	animation-name: zoom;
+	animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+	from {
+		transform: scale(0);
+	}
+	to {
+		transform: scale(1);
+	}
+}
+
+/* The Close Button */
+.close {
+	position: absolute;
+	top: 15px;
+	right: 35px;
+	color: #f1f1f1;
+	font-size: 40px;
+	font-weight: bold;
+	transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+	color: #bbb;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+
+
+
+  /* fonts */
+  @font-face {
+    font-style: normal;
+    font-family: "Oswald";
+    font-weight: 600;
+    font-display: swap;
+    src: url("../fonts/oswald-v53-latin-600.woff2") format("woff2");
+  }
+
+  @font-face {
+    font-style: normal;
+    font-family: "Yellowtail";
+    font-weight: 400;
+    font-display: swap;
+    src: url("../fonts/yellowtail-v22-latin-regular.woff2") format("woff2");
+  }
+
+  @font-face {
+    font-style: normal;
+    font-family: "Oswald";
+    font-weight: 400;
+    font-display: swap;
+    src: url("../fonts/oswald-v53-latin-regular.woff2") format("woff2");
+  }
+
+}
+
+/* --- Media Query: min-width: 48rem (Tablet/Mid-size Desktop) --- */
+/* --- Media Query: min-width: 64rem (Desktop) --- */
+/* --- Media Query: max-width: 86.5rem (Mobile Navigation Breakpoint) --- */
+@media only screen and (max-width: 86.5rem) {
+	.modal-content {
+		width: 100%;
+	}
+}
+/* --- Media Query: 40.625rem <= min-width < 64rem (Tablet) --- */
+/* --- Media Query: min-width: 86.563rem (Desktop Navigation) --- */

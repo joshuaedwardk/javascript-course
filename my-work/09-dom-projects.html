@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doms Projects</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="title">Chapter 9: Doms Projects</h1>
+        
+        <section id="youtube-section">
+            <div class="container">
+                <p>Youtube Subscribe Button</p>
+                <!-- Step 1 | create button, create on click, create class -->
+                 <button onclick="
+                /* Step 2 | console.log(document.querySelector('.youtubeButton'));*/
+                /* Step 3 | it works up to here now make variable using const buttonElement*/
+                /* Step 4 | add if / else statements */
+                /* Step 5 | instead of innerHTML use innerText */
+                /*
+                const buttonElement = document.querySelector('.js-subscribe-button');
+               
+                  if (buttonElement.innerText === 'Subscribe') {
+                    buttonElement.innerText = 'Subscribed'
+                  } else {
+                    buttonElement.innerText = 'Subscribe'
+                  }
+                 */                
+                 subscribe();
+                /* Step 6 | Function - Cleaning Code function subscribe() */
+                 " class="js-subscribe-button">Subscribe</button>
+                 
+              </div>  
+            </section>
+
+         <section class="amazon-section">
+          <div class="container">
+            <p>Amazon Shipping Calculator</p>
+            <input placeholder="Cost of order">
+            <button onclick="       
+            " class="btn-input">Calculate</button>
+          </div>
+         </section> 
+
+
+         <section class="button-section">
+          <div class="container">
+            
+          </div>
+         </section>
+
+    </div>
+</body>
+<script>
+    function subscribe() {
+    const buttonElement = document.querySelector('.js-subscribe-button');
+        if (buttonElement.innerText === 'Subscribe') {
+          buttonElement.innerText = 'Subscribed'
+        } else {
+          buttonElement.innerText = 'Subscribe'
+        }
+    }
+    
+</script>
+
+</html>
