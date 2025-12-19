@@ -1,31 +1,42 @@
 @media only screen and (min-width: 0rem) {
   :root {
     /* color */
-    --primary: #001f3f;
-    --primaryLight: #43b7ff;
+
+    /* =========================COLOR PALETTE (SWAPPABLE)========================= */
+
+--palette-1: #360185;
+--palette-1a:#36018520;
+--palette-2: #0071ff;
+--palette-3: #955196;
+--palette-4: #DE1A58;
+--palette-5: #ff6e54;
+--palette-6: #ffa600;
+--bg-palette-1: #ffffff;
+--bg-palette-2: #fafbfc;
+--bg-palette-3: #dddddd;
+
+
+    /* =========================SEMANTIC COLOR TOKENS========================= */
+
+
+    --primary: #0765c2;
+    --primaryLight: #0765c240;
     --secondary: #43b7ff;
-    --secondaryLight: #001f3f;
+    --secondaryLight: #43b7ff60;
     --tertiary: #990000;
     --thirdLight: #99000060;
     --thirdLightOpp: #99000020;
     /* specific-colors */
     --headerColor: #1a1a1a;
     --bodyTextColor: #4e4b66;
-    --bodyTextColorWhite: #fafbfc;
     --bodyNoteCode: #ffff74;
+    --accent-color: #0071ff;
 
-    --bg-color: #ffffff;
-    --text-color: #333;
-    --header-bg: #f2ffef;
-    --border-color: #ddd;
     --code-bg: #282c34;
     --code-text: #abb2bf;
     /* color-bg */
-    --backgroundPrimary: #fff;
-    --backgroundSecondary: #efefef;
-    --primary-color: #11121a;
+
     --hover-color: #272832;
-    --accent-color: #0071ff;
     --text-color: #c9c9c9;
     /*gradiant*/
     /* background-image: var(--gradiant); */
@@ -37,22 +48,26 @@
     --h4: clamp(1.5rem, 1.3rem + 3vw, 1.75rem);
     --h5: clamp(1.25rem, 1.05rem + 3vw, 1.5rem);
     --bodyFontSize: clamp(1rem, 0.8rem + 3vw, 1.25rem);
-    --bodyFontSmall: clamp(0.75rem, 0.6rem + 3vw, 0.9rem);
-    --sectionPadding: clamp(2.75rem, 5.82vw, 5.25rem) 1rem;
-    /*style*/
-    --headerFont: "Oswald", Arial, sans-serif;
-    --font-family-code: "JetBrains Mono", monospace;
-    --bodyFont: "Source Sans 3", Arial, sans-serif;
+    --bodyFontStyleSmall: clamp(0.75rem, 0.6rem + 3vw, 0.9rem);
+    --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
+    /* =========================Typography========================= */
+    --headerFontStyle: "Oswald", Arial, sans-serif;
+    --bodyFontStyle: "Source Sans 3", Arial, sans-serif;
     --navNeon: "Yellowtail", "Adjusted Verdana Fallback", "Verdana", sans-serif;
-    --radius-normal: 0.25rem;
-    --radius-full: 9999px;
+
+    /* =========================Layout========================= */
+    --sectionPadding: clamp(2.75rem, 5.82vw, 5.25rem) 1rem;
   }
+
+
+
+
 
   /* Base HTML/Body Styles */
   body,
   html {
     color: var(--bodyTextColor);
-    font-family: var(--bodyFont);
+    font-family: var(--bodyFontStyle);
     font-size: 100%;
     margin: 0;
     padding: 0;
@@ -77,7 +92,7 @@
   .container {
     position: relative;
     margin: 0 auto;
-    width: min(50em, 98%);
+    width: min(75em, 98%);
     border-radius: 1em;
     padding: 1em;
   }
@@ -85,7 +100,7 @@
   /*Goal Section */
 
   .goal-container {
-    background-color: var(--backgroundPrimary);
+    background-color: var(--bg-palette-1);
     display: grid;
     grid-gap: .5em;
     margin-top: 2em;
@@ -119,7 +134,7 @@
   .goal-chapter .goal-item-video .video-element {
     background-color: var(--tertiary);
     border: 1px solid var(--primary);
-    color: var(--backgroundSecondary);
+    color: var(--bg-palette-2);
     min-height: 3em;
     padding: .5em;
   }
@@ -133,7 +148,7 @@
 
 
   .video-element a {
-    color: var(--backgroundSecondary);
+    color: var(--bg-palette-2);
   }
 
   .game {
@@ -142,7 +157,7 @@
 
   .box {
     padding: 1em;
-    background-color: var(--backgroundSecondary);
+    background-color: var(--bg-palette-2);
     margin-top: 1em;
     margin-bottom: 1em;
     border: 1px solid var(--primary);
@@ -155,7 +170,7 @@
   h5,
   h6 {
     margin: 0;
-    font-family: var(--headerFont, sans-serif);
+    font-family: var(--headerFontStyle, sans-serif);
     color: var(--headerColor, #333);
     font-weight: 700;
     line-height: 1.2;
@@ -182,7 +197,7 @@
   }
 
   h6 {
-    font-size: var(--h6, var(--bodyFontSize));
+    font-size: var(--h6, var(--bodyFontStyleSize));
   }
 
   .title {
@@ -257,7 +272,7 @@
   }
 
   button:hover {
-    background-color: var(--backgroundPrimary);
+    background-color: var(--bg-palette-1);
   }
 
   a:hover,
@@ -304,7 +319,7 @@
     padding: 1em;
     box-sizing: border-box;
     border-radius: 0.5em;
-    background-color: var(--backgroundPrimary);
+    background-color: var(--bg-palette-1);
     border: 5px solid var(--secondaryLight);
   }
 
@@ -317,8 +332,14 @@
   }
 
   /* Navigation */
+  #navbar {
+    width: 100%;
+    position: fixed;
+    z-index: 10000;
+  }
+
   nav {
-    background-color: var(--primary-color);
+    background-color: var(--primary);
     border-bottom: 1px solid var(--hover-color);
   }
 
@@ -340,11 +361,13 @@
     text-decoration: none;
     color: var(--text-color);
     padding: 1em 2em;
+    font-size: var(--bodyFontSize);
+    font-family: var(--headerFontStyle);
     transition: background-color 150ms ease;
   }
 
   nav a:hover {
-    background-color: var(--hover-color);
+    background-color: var(--accent-color);
   }
 
   nav a.active-link {
@@ -425,15 +448,15 @@
   .grid-container {
     display: grid;
     gap: 1px;
-    background-color: var(--border-color);
-    border: 1px solid var(--border-color);
+    background-color: var(--bg-palette-3);
+    border: 1px solid var(--bg-palette-3);
     margin: 20px 0;
     border-radius: 4px;
     overflow: hidden;
   }
 
   .grid-header {
-    background-color: var(--header-bg);
+    background-color: var(--bg-palette-2);
     font-weight: bold;
     padding: 12px;
   }
@@ -509,12 +532,17 @@
     display: block;
   }
 
-  nav {    
+  #navbar {
+    width: min(15em, 100%);
+
+  }
+
+  nav {
     position: fixed;
     top: 0;
     right: -100%;
     height: 100vh;
-    width: min(15em, 100%);
+    width: min(100%);
     z-index: 10;
     border-left: 1px solid var(--hover-color);
     transition: right 300ms ease-in-out;
@@ -531,6 +559,7 @@
   nav ul {
     width: 100%;
     flex-direction: column;
+
   }
 
   nav a {
