@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Listng all Projects</title>
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
 <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
     <div id="open-sidebar-button" onclick="openSidebar()" aria-label="open sidebar" aria-expanded="false"
@@ -283,94 +285,131 @@
                         <p><a href="/my-work/09-dom.html" target="_blank">09-dom.html</a></p>
                         <!-- <p><a href="/my-work/08-rock-paper-scissors.html" target="_blank">08-rock-paper-scissors.html</a></p> -->
                     </div>
-
-                    <div class="goal-item-body">
-                        <h4>In this Lession</h4>
-                        <ol>
-                            <li><a href="/my-work/assets/img/9/built-in-objects-provided-by-js.png"
-                                    target="_blank">Built-in Objects (objects provided by Javascript)</a></li>
-                            <li>DOM is another built-in object: <u>Document object</u></li>
-                            <li><a href="https://youtu.be/EerdGm-ehJQ?t=19828" target="_blank"
-                                    rel="noopener noreferrer"><code>document.body.innerHTML = 'Hello';</code> </a>
-                                <ul>
-                                    <li><code>document.</code> object is linked to the webpage || represents / models
-                                        the webpage.</li>
-                                    <li><a href="assets/img/9/document-methods.png" target="_blank"
-                                            rel="noopener noreferrer">document also has methods</a></li>
-                                    <li><a href="https://youtu.be/EerdGm-ehJQ?t=20363" target="_blank"
-                                            rel="noopener noreferrer">going over document.body.innerHTML</a></li>
-                                </ul>
-                            </li>
-                            <li>method = function saved inside an object</li>
-                            <li><a href="https://youtu.be/EerdGm-ehJQ?t=20365" target="_blank"
-                                    rel="noopener noreferrer"><code>document.querySelector()</code></a>
-                                <ul>
-                                    <li>lets us get <u>any element</u> from the page and put it inside JavaScript</li>
-                                    <li><a href="https://youtu.be/EerdGm-ehJQ?t=20537" target="_blank"
-                                            rel="noopener noreferrer">Every HTML element has a property .innerHTML</a>
-                                    </li>
-                                    <li><a href="https://youtu.be/EerdGm-ehJQ?t=20904" target="_blank"
-                                            rel="noopener noreferrer">Dom combines HTML and Javascript together</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="https://youtu.be/EerdGm-ehJQ?t=20935" target="_blank"
-                                    rel="noopener noreferrer">Prjects with dom</a> click here <a
-                                    href="https://supersimple.dev/projects/dom/" target="_blank"
-                                    rel="noopener noreferrer">click here</a>
-                                <ul>
-                                    <li>Youtube Project: <a href="https://youtu.be/EerdGm-ehJQ?t=21204" target="_blank"
-                                            rel="noopener noreferrer">Steps</a>
-                                        <ul>
-                                            <li><img id="previewImg" src="/my-work/assets/img/9/dom-youtube-1.png"
-                                                    alt="Project 1 Dom" style="width:100%;max-width:300px">
+                        <div class="goal-item-body">
+                            <div class="tabset">
+                                <!-- Tab 1 -->
+                                <input type="radio" name="tabset" id="tab1" aria-controls="tab-lesson" checked>
+                                <label for="tab1">In this Lesson</label>
+                                <!-- Tab 2 -->
+                                <input type="radio" name="tabset" id="tab2" aria-controls="tab-example">
+                                <label for="tab2">Examples</label>
+                                <!-- Tab 3 -->
+                                <div class="tab-panels">
+                                    <section id="tab-lesson" class="tab-panel">
+                                        <h4><a href="/my-work/assets/img/9/09-inThisLesson.png" target="_blank" rel="noopener noreferrer">In
+                                                this Lesson</a></h4>
+                                        <ol>
+                                            <li><a href="/my-work/assets/img/9/built-in-objects-provided-by-js.png" target="_blank">Built-in
+                                                    Objects (objects provided by Javascript)</a>
                                             </li>
-                                        </ul>
-
-                                    </li>
-                                    <li>Rock Paper Scissors Project: <a href="https://youtu.be/EerdGm-ehJQ?t=21773"
-                                            target="_blank" rel="noopener noreferrer">Steps</a></li>
-                                    <li>Amazon Shipping Calculator: <a href="https://youtu.be/EerdGm-ehJQ?t=22486"
-                                            target="_blank" rel="noopener noreferrer">Steps</a>
-                                        <ul>
-                                            <li><img id="previewImg" src="/my-work/assets/img/9/dom-amazon-steps-1.png"
-                                                    alt="Project 3 Amazon Shipping Calculator"
-                                                    style="width:100%;max-width:300px"></li>
-                                            <li><a href="https://youtu.be/EerdGm-ehJQ?t=22791" target="_blank"
-                                                    rel="noopener noreferrer">input variable doesn't use innerHTML but
-                                                    value</a></li>
-                                            <li><a href="https://youtu.be/EerdGm-ehJQ?t=23111" target="_blank"
-                                                    rel="noopener noreferrer">Type Coercion: whenever we get a value
-                                                    from the DOM, the value will be a string. Javascript has a solution
-                                                    <code>Number(inputElement.value)</code></a></li>
-                                            <li><img id="previewImg"
-                                                    src="/my-work/assets/img/9/dom-project-3-Amazon-1.png"
-                                                    alt="Project 3 Amazon Shipping Calculator"
-                                                    style="width:100%;max-width:300px"></li>
-                                            <li><a href="https://youtu.be/EerdGm-ehJQ?t=23287 target=" _blank"
-                                                    rel="noopener noreferrer">clicks, keydowns => events | onclick,
-                                                    onkeydown =>event listeners</a>
+                                            <li>DOM is another built-in object: <u>Document object</u></li>
+                                            <li><a href="https://youtu.be/EerdGm-ehJQ?t=19828" target="_blank"
+                                                    rel="noopener noreferrer"><code>document.body.innerHTML = 'Hello';</code>
+                                                </a>
                                                 <ul>
-                                                    <li><a href="https://www.youtube.com/watch?v=EerdGm-ehJQ&t=22486s target="
-                                                            _blank" rel="noopener noreferrer"><strong>Event
-                                                                Listeners</strong></a></li>
-                                                    <li>onclick = click</li>
-                                                    <li>onkeydown = key press</li>
-                                                    <li>onscroll = scrolling</li>
-                                                    <li>onmouseenter = hovering over</li>
-                                                    <li>onmouseleave = stop hovering</li>
-                                                    <li>many more</li>
+                                                    <li><code>document.</code> object is linked to the webpage || represents
+                                                        / models
+                                                        the webpage.</li>
+                                                    <li><a href="assets/img/9/document-methods.png" target="_blank"
+                                                            rel="noopener noreferrer">document also has methods</a></li>
+                                                    <li><a href="https://youtu.be/EerdGm-ehJQ?t=20363" target="_blank"
+                                                            rel="noopener noreferrer">going over document.body.innerHTML</a>
+                                                    </li>
                                                 </ul>
                                             </li>
-                                            <li><a href="https://youtu.be/EerdGm-ehJQ?t=23585" target="_blank"
-                                                    rel="noopener noreferrer">Number to a STRING</a></li>
+                                            <li>method = function saved inside an object</li>
+                                            <li><a href="https://youtu.be/EerdGm-ehJQ?t=20365" target="_blank"
+                                                    rel="noopener noreferrer"><code>document.querySelector()</code></a>
+                                                <ul>
+                                                    <li>lets us get <u>any element</u> from the page and put it inside
+                                                        JavaScript</li>
+                                                    <li><a href="https://youtu.be/EerdGm-ehJQ?t=20537" target="_blank"
+                                                            rel="noopener noreferrer">Every HTML element has a property
+                                                            .innerHTML</a>
+                                                    </li>
+                                                    <li><a href="https://youtu.be/EerdGm-ehJQ?t=20904" target="_blank"
+                                                            rel="noopener noreferrer">Dom combines HTML and Javascript
+                                                            together</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="https://youtu.be/EerdGm-ehJQ?t=20935" target="_blank" rel="noopener noreferrer">Prjects
+                                                    with dom</a> click here <a href="https://supersimple.dev/projects/dom/" target="_blank"
+                                                    rel="noopener noreferrer">click here</a>
+                                                <ul>
+                                                    <li>Youtube Project: <a href="https://youtu.be/EerdGm-ehJQ?t=21204" target="_blank"
+                                                            rel="noopener noreferrer">Steps</a>
+                                                        <ul>
+                                                            <li><img id="previewImg" src="/my-work/assets/img/9/dom-youtube-1.png"
+                                                                    alt="Project 1 Dom" style="width:100%;max-width:300px">
+                                                            </li>
+                                                        </ul>
+
+                                                    </li>
+                                                    <li>Rock Paper Scissors Project: <a href="https://youtu.be/EerdGm-ehJQ?t=21773"
+                                                            target="_blank" rel="noopener noreferrer">Steps</a></li>
+                                                    <li>Amazon Shipping Calculator: <a href="https://youtu.be/EerdGm-ehJQ?t=22486"
+                                                            target="_blank" rel="noopener noreferrer">Steps</a>
+                                                        <ul>
+                                                            <li><img id="previewImg" src="/my-work/assets/img/9/dom-amazon-steps-1.png"
+                                                                    alt="Project 3 Amazon Shipping Calculator"
+                                                                    style="width:100%;max-width:300px"></li>
+                                                            <li><a href="https://youtu.be/EerdGm-ehJQ?t=22791" target="_blank"
+                                                                    rel="noopener noreferrer">input variable
+                                                                    doesn't use innerHTML but
+                                                                    value</a></li>
+                                                            <li><a href="https://youtu.be/EerdGm-ehJQ?t=23111" target="_blank"
+                                                                    rel="noopener noreferrer">Type Coercion:
+                                                                    whenever we get a value
+                                                                    from the DOM, the value will be a string. Javascript has
+                                                                    a solution
+                                                                    <code>Number(inputElement.value)</code></a></li>
+                                                            <li><img id="previewImg" src="/my-work/assets/img/9/dom-project-3-Amazon-1.png"
+                                                                    alt="Project 3 Amazon Shipping Calculator"
+                                                                    style="width:100%;max-width:300px"></li>
+                                                            <li><a href="https://youtu.be/EerdGm-ehJQ?t=23287 target=" _blank"
+                                                                    rel="noopener noreferrer">clicks, keydowns =>
+                                                                    events | onclick,
+                                                                    onkeydown =>event listeners</a>
+                                                                <ul>
+                                                                    <li><a href="https://www.youtube.com/watch?v=EerdGm-ehJQ&t=22486s target="
+                                                                            _blank" rel="noopener noreferrer"><strong>Event
+                                                                                Listeners</strong></a></li>
+                                                                    <li>onclick = click</li>
+                                                                    <li>onkeydown = key press</li>
+                                                                    <li>onscroll = scrolling</li>
+                                                                    <li>onmouseenter = hovering over</li>
+                                                                    <li>onmouseleave = stop hovering</li>
+                                                                    <li>many more</li>
+                                                                </ul>
+                                                            </li>
+                                                            <li><a href="https://youtu.be/EerdGm-ehJQ?t=23585" target="_blank"
+                                                                    rel="noopener noreferrer">Number to a
+                                                                    STRING</a></li>
+                                                        </ul>
+
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ol>
+                                    </section>
+                                    <section id="tab-example" class="tab-panel">
+                                        <h4><a href="/my-work/assets/img/9/09-inThisLesson.png" target="_blank"
+                                                rel="noopener noreferrer">Example</a></h4>
+                                        <ul>
+                                            <li><strong>9a.</strong> Create a <code>&lt;button>9a&lt;button></code>. Use
+                                                <code>document.querySelector('button')</code> to get the button from the
+                                                page, and then display in the console.
+                                            </li>
+                                            <li><strong>9b.</strong> </li>
+                                            <li><strong>9c.</strong> </li>
+                                            <li><strong>9d.</strong> </li>
+                                            <li><strong>9e.</strong> </li>
                                         </ul>
+                                    </section>
 
-                                    </li>
-                                </ul>
-                            </li>
-                         </ol>
-                    </div>
-
+                                </div>
+                            </div>
+                        </div>
                     <div class="goal-item-video">
                         <div class="video-element">
                             <a href="https://youtu.be/EerdGm-ehJQ?t=19546" target="_blank">Start</a>
@@ -385,22 +424,10 @@
                             <a href="https://youtu.be/EerdGm-ehJQ?t=23861" target="_blank">In this Lesson</a>
                         </div>
                         <div class="video-element">
-                            <a href="#" target="_blank">Exercises</a>
+                            <a href="https://www.youtube.com/watch?v=EerdGm-ehJQ&t=23861s" target="_blank">Exercises</a>
                         </div>
                     </div>
                 </div>
-            </div>
-            <!-- The Modal -->
-            <div id="myModal" class="modal">
-
-                <!-- The Close Button -->
-                <span class="close"></span>
-
-                <!-- Modal Content (The Image) -->
-                <img class="modal-content" id="img01">
-
-                <!-- Modal Caption (Image Text) -->
-                <div id="caption"></div>
             </div>
         </div>
     </section>
@@ -420,4 +447,5 @@
 </body>
 <script src="/my-work/assets/js/img-modal.js"></script>
 <script src="/my-work/assets/js/nav.js"></script>
+
 </html>
