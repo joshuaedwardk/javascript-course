@@ -101,7 +101,7 @@
 
   .goal-container {
     background-color: var(--bg-palette-1);
-    display: grid;
+    /* display: grid; */
     grid-gap: .5em;
     margin-top: 2em;
     border-top: 9px solid var(--primary);
@@ -509,7 +509,7 @@ input:focus-visible + label {
 
   /* grid container */
   .grid-container {
-    display: grid;
+    /* display: grid; */
     gap: 1px;
     background-color: var(--bg-palette-3);
     border: 1px solid var(--bg-palette-3);
