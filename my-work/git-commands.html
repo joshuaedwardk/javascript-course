@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Git Commands</title>
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
 <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
     <div id="open-sidebar-button" onclick="openSidebar()" aria-label="open sidebar" aria-expanded="false"
@@ -41,124 +43,209 @@
     <!-- Navbar: https://www.coding2go.com/animated-navbar/-->
     <section id="main">
         <div class="container">
+            <h1>📜 Git Terminal Commands: A Novice's Guide</h1>
+            <p>A structured, grid-based reference for Git workflows across Linux, Windows, and macOS.</p>
 
-        <h1>📜 Git Terminal Commands: A Novice's Guide</h1>
-        <p>A structured, grid-based reference for Git workflows across Linux, Windows, and macOS.</p>
+            <h2>📚 Essential Git Terms</h2>
 
-        <h2>📚 Essential Git Terms</h2>
+            <div class="grid-container terms-grid">
+                <div class="grid-header">Term</div>
+                <div class="grid-header">Definition</div>
 
-        <div class="grid-container terms-grid">
-            <div class="grid-header">Term</div>
-            <div class="grid-header">Definition</div>
+                <div class="grid-item"><strong>Repository</strong></div>
+                <div class="grid-item">Your project's folder where Git tracks changes.</div>
 
-            <div class="grid-item"><strong>Repository</strong></div>
-            <div class="grid-item">Your project's folder where Git tracks changes.</div>
+                <div class="grid-item"><strong>Remote (origin)</strong></div>
+                <div class="grid-item">The central copy hosted online (e.g., GitHub).</div>
 
-            <div class="grid-item"><strong>Remote (origin)</strong></div>
-            <div class="grid-item">The central copy hosted online (e.g., GitHub).</div>
-
-            <div class="grid-item"><strong>Commit</strong></div>
-            <div class="grid-item">A "snapshot" of your files recorded in history.</div>
-        </div>
-
-        <h2>🚀 Step 1: Getting Started</h2>
-        <div class="grid-container command-steps-grid">
-            <div class="grid-header">Scenario</div>
-            <div class="grid-header">Command</div>
-            <div class="grid-header">Description</div>
-
-            <div class="grid-item">New Local</div>
-            <div class="grid-item"><span class="code">git init</span></div>
-            <div class="grid-item">Initialize a new repo in current folder.</div>
-
-            <div class="grid-item">Existing</div>
-            <div class="grid-item"><span class="code">git clone [URL]</span></div>
-            <div class="grid-item">Download a project from GitHub.</div>
-        </div>
-
-        <h2>🛠️ Step 2: Save & Sync (The Daily Loop)</h2>
-
-        <div class="grid-container command-steps-grid">
-            <div class="grid-header">Order</div>
-            <div class="grid-header">Command</div>
-            <div class="grid-header">Description</div>
-
-            <div class="grid-item">1. Check</div>
-            <div class="grid-item"><span class="code">git status</span></div>
-            <div class="grid-item">See what has changed.</div>
-
-            <div class="grid-item">2. Stage</div>
-            <div class="grid-item"><span class="code">git add .</span></div>
-            <div class="grid-item">Prepare ALL changes for saving.</div>
-
-            <div class="grid-item">3. Commit</div>
-            <div class="grid-item"><span class="code">git commit -m "msg"</span></div>
-            <div class="grid-item">Save changes locally with a message.</div>
-
-            <div class="grid-item">4. Pull</div>
-            <div class="grid-item"><span class="code">git pull origin main</span></div>
-            <div class="grid-item">Download others' work before you push.</div>
-
-            <div class="grid-item">5. Push</div>
-            <div class="grid-item"><span class="code">git push origin main</span></div>
-            <div class="grid-item">Upload your work to GitHub.</div>
-        </div>
-
-        <h2>🌳 Branching & 🍴 Forking</h2>
-        <div class="grid-container command-only-grid">
-            <div class="grid-header">Action</div>
-            <div class="grid-header">Command / Instruction</div>
-
-            <div class="grid-item">Create Branch</div>
-            <div class="grid-item"><span class="code">git checkout -b [name]</span></div>
-            <div class="grid-item">Switch Branch</div>
-            <div class="grid-item"><span class="code">git checkout [name]</span></div>
-            <div class="grid-item">Fork Project</div>
-            <div class="grid-item">Click <strong>Fork</strong> on GitHub UI, then clone your version.</div>
-            <div class="grid-item">PR (Pull Request)</div>
-            <div class="grid-item">On GitHub, click <strong>"New Pull Request"</strong> to merge Fork into Main.</div>
-        </div>
-
-        <h2>🆘 The "Emergency" Section</h2>
-        <div class="grid-container command-steps-grid">
-            <div class="grid-header">Goal</div>
-            <div class="grid-header">Command</div>
-            <div class="grid-header">Result</div>
-
-            <div class="grid-item">Start Over</div>
-            <div class="grid-item"><span class="code">git reset --hard origin/main</span></div>
-            <div class="grid-item">Wipes all local changes to match GitHub exactly.</div>
-
-            <div class="grid-item">Clean Junk</div>
-            <div class="grid-item"><span class="code">git clean -fd</span></div>
-            <div class="grid-item">Deletes untracked files and folders.</div>
-        </div>
-
-        <div class="grid-container command-steps-grid">
-            <div class="grid-header">Goal</div>
-            <div class="grid-header">Command</div>
-            <div class="grid-header">Description</div>
-
-            <div class="grid-item">Push to Remote</div>
-            <div class="grid-item"><span class="code">git push -u origin [branch-name]</span></div>
-            <div class="grid-item">Uploads your new branch to GitHub and links it (the <span class="code">-u</span> sets
-                it up for future pushes).</div>
-
-            <div class="grid-item">Merge to Main</div>
-            <div class="grid-item"><span class="code">git merge [branch-name]</span></div>
-            <div class="grid-item">Run this while on main to pull changes from your feature branch into it.</div>
-
-            <div class="grid-item">Nuke Local</div>
-            <div class="grid-item"><span class="code">git branch -D [branch-name]</span></div>
-            <div class="grid-item">Force Delete: Deletes the branch on your computer even if it hasn't been merged.
+                <div class="grid-item"><strong>Commit</strong></div>
+                <div class="grid-item">A "snapshot" of your files recorded in history.</div>
             </div>
 
-            <div class="grid-item">Nuke Remote</div>
-            <div class="grid-item"><span class="code">git push origin --delete [branch-name]</span></div>
-            <div class="grid-item">Deletes the branch on GitHub permanently.</div>
+            <h2>🚀 Step 1: Getting Started</h2>
+            <div class="grid-container command-steps-grid">
+                <div class="grid-header">Scenario</div>
+                <div class="grid-header">Command</div>
+                <div class="grid-header">Description</div>
+
+                <div class="grid-item">New Local</div>
+                <div class="grid-item"><span class="code">git init</span></div>
+                <div class="grid-item">Initialize a new repo in current folder.</div>
+
+                <div class="grid-item">Existing</div>
+                <div class="grid-item"><span class="code">git clone [URL]</span></div>
+                <div class="grid-item">Download a project from GitHub.</div>
+            </div>
+
+            <h2>🛠️ Step 2: Save & Sync (The Daily Loop)</h2>
+
+            <div class="grid-container command-steps-grid">
+                <div class="grid-header">Order</div>
+                <div class="grid-header">Command</div>
+                <div class="grid-header">Description</div>
+
+                <div class="grid-item">1. Check</div>
+                <div class="grid-item"><span class="code">git status</span></div>
+                <div class="grid-item">See what has changed.</div>
+
+                <div class="grid-item">2. Stage</div>
+                <div class="grid-item"><span class="code">git add .</span></div>
+                <div class="grid-item">Prepare ALL changes for saving.</div>
+
+                <div class="grid-item">3. Commit</div>
+                <div class="grid-item"><span class="code">git commit -m "msg"</span></div>
+                <div class="grid-item">Save changes locally with a message.</div>
+
+                <div class="grid-item">4. Pull</div>
+                <div class="grid-item"><span class="code">git pull origin main</span></div>
+                <div class="grid-item">Download others' work before you push.</div>
+
+                <div class="grid-item">5. Push</div>
+                <div class="grid-item"><span class="code">git push origin main</span></div>
+                <div class="grid-item">Upload your work to GitHub.</div>
+            </div>
+
+            <h2>🌳 Branching & 🍴 Forking</h2>
+            <div class="grid-container command-only-grid">
+                <div class="grid-header">Action</div>
+                <div class="grid-header">Command / Instruction</div>
+
+                <div class="grid-item">Create Branch</div>
+                <div class="grid-item"><span class="code">git checkout -b [name]</span></div>
+                <div class="grid-item">Switch Branch</div>
+                <div class="grid-item"><span class="code">git checkout [name]</span></div>
+                <div class="grid-item">Fork Project</div>
+                <div class="grid-item">Click <strong>Fork</strong> on GitHub UI, then clone your version.</div>
+                <div class="grid-item">PR (Pull Request)</div>
+                <div class="grid-item">On GitHub, click <strong>"New Pull Request"</strong> to merge Fork into Main.
+                </div>
+            </div>
+
+            <h2>🆘 The "Emergency" Section</h2>
+            <div class="grid-container command-steps-grid">
+                <div class="grid-header">Goal</div>
+                <div class="grid-header">Command</div>
+                <div class="grid-header">Result</div>
+
+                <div class="grid-item">Start Over</div>
+                <div class="grid-item"><span class="code">git reset --hard origin/main</span></div>
+                <div class="grid-item">Wipes all local changes to match GitHub exactly.</div>
+
+                <div class="grid-item">Clean Junk</div>
+                <div class="grid-item"><span class="code">git clean -fd</span></div>
+                <div class="grid-item">Deletes untracked files and folders.</div>
+            </div>
+
+            <div class="grid-container command-steps-grid">
+                <div class="grid-header">Goal</div>
+                <div class="grid-header">Command</div>
+                <div class="grid-header">Description</div>
+
+                <div class="grid-item">Push to Remote</div>
+                <div class="grid-item"><span class="code">git push -u origin [branch-name]</span></div>
+                <div class="grid-item">Uploads your new branch to GitHub and links it (the <span class="code">-u</span>
+                    sets
+                    it up for future pushes).</div>
+
+                <div class="grid-item">Merge to Main</div>
+                <div class="grid-item"><span class="code">git merge [branch-name]</span></div>
+                <div class="grid-item">Run this while on main to pull changes from your feature branch into it.</div>
+
+                <div class="grid-item">Nuke Local</div>
+                <div class="grid-item"><span class="code">git branch -D [branch-name]</span></div>
+                <div class="grid-item">Force Delete: Deletes the branch on your computer even if it hasn't been merged.
+                </div>
+
+                <div class="grid-item">Nuke Remote</div>
+                <div class="grid-item"><span class="code">git push origin --delete [branch-name]</span></div>
+                <div class="grid-item">Deletes the branch on GitHub permanently.</div>
+            </div>
         </div>
+        <div class="container">
+            <h2>🐳 Docker Compose: WordPress Workflow</h2>
+            <p>Manage your local WordPress environment using Docker Compose commands.</p>
+
+
+
+            <div class="grid-container command-steps-grid">
+                <div class="grid-header">Step</div>
+                <div class="grid-header">Command</div>
+                <div class="grid-header">What it does</div>
+
+                <div class="grid-item">1. Start</div>
+                <div class="grid-item"><span class="code">docker compose up -d</span></div>
+                <div class="grid-item">Builds/starts containers in detached mode; creates volumes.</div>
+
+                <div class="grid-item">2. Confirm</div>
+                <div class="grid-item"><span class="code">docker compose ps</span></div>
+                <div class="grid-item">Check if WordPress and DB containers are <strong>Up</strong>.</div>
+
+                <div class="grid-item">3. Stop</div>
+                <div class="grid-item"><span class="code">docker compose down</span></div>
+                <div class="grid-item">Stops containers. Database volumes and data <strong>persist</strong>.</div>
+
+                <div class="grid-item">4. Restart</div>
+                <div class="grid-item"><span class="code">docker compose up -d</span></div>
+                <div class="grid-item">Brings the site back exactly as it was.</div>
+            </div>
+
+            <h3>🔍 Logs & Access</h3>
+            <div class="grid-container command-steps-grid">
+                <div class="grid-header">Target</div>
+                <div class="grid-header">Command / Link</div>
+                <div class="grid-header">Notes</div>
+
+                <div class="grid-item">Browser Access</div>
+                <div class="grid-item"><a href="http://localhost:8000" target="_blank">http://localhost:8000</a></div>
+                <div class="grid-item">View the WordPress install screen.</div>
+
+                <div class="grid-item">Live Logs</div>
+                <div class="grid-item"><span class="code">docker compose logs -f</span></div>
+                <div class="grid-item">Follow all logs live. Use <span class="code">logs [service]</span> for specific
+                    ones.</div>
+
+                <div class="grid-item">Nuclear Reset</div>
+                <div class="grid-item"><span class="code">docker compose down -v</span></div>
+                <div class="grid-item">⚠️ <strong>Deletes DB and all content.</strong> wp-content remains if mapped.
+                </div>
+            </div>
+
+            <h3>🧰 Daily Dev Commands</h3>
+            <div class="grid-container command-steps-grid">
+                <div class="grid-header">Action</div>
+                <div class="grid-header">Command</div>
+                <div class="grid-header">Description</div>
+
+                <div class="grid-item">SSH-like Access</div>
+                <div class="grid-item"><span class="code">docker compose exec wordpress bash</span></div>
+                <div class="grid-item">Enter the WordPress container terminal.</div>
+
+                <div class="grid-item">WP-CLI</div>
+                <div class="grid-item"><span class="code">docker compose exec wordpress wp plugin list</span></div>
+                <div class="grid-item">Run WordPress CLI commands directly.</div>
+
+                <div class="grid-item">Import DB</div>
+                <div class="grid-item"><span class="code">docker compose exec -T db mysql -u user -ppass db <
+                            dump.sql</span>
+                </div>
+                <div class="grid-item">Import an existing SQL dump into the container.</div>
+            </div>
+
+            <h3>🧠 Recommended Workflow</h3>
+            <div class="grid-container terms-grid">
+                <div class="grid-header">Scenario</div>
+                <div class="grid-header">Action</div>
+
+                <div class="grid-item"><strong>Typical Day</strong></div>
+                <div class="grid-item">Up (<span class="code">-d</span>) → Work on code → Down (to save resources).
+                </div>
+
+                <div class="grid-item"><strong>Debug Mode</strong></div>
+                <div class="grid-item">Keep <span class="code">docker compose logs -f</span> open in a separate
+                    terminal.</div>
+            </div>
+
         </div>
-        
     </section>
 
     <footer>
